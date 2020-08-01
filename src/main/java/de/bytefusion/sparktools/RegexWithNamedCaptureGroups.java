@@ -27,7 +27,7 @@ public class RegexWithNamedCaptureGroups {
         String pattern = p.pattern();
         log.info("pattern=" + pattern );
         // regex match all capturing groups
-        Pattern p1 = Pattern.compile("\\((\\?<([^(>=!)]+)>)?");
+        Pattern p1 = Pattern.compile("\\((\\?<([^(:>=!)]+)>)?");
         // find all captering groups
         Matcher m = p1.matcher(pattern);
         int count=0;
@@ -46,6 +46,7 @@ public class RegexWithNamedCaptureGroups {
             }
         }
         this.fields = new String[allFields.size()];
+        this.fields = allFields.toArray(this.fields);
         this.values = new String[allFields.size()];
         log.info( "fields: " + Arrays.stream( this.values ).collect(Collectors.joining(",")) );
     }
@@ -67,5 +68,19 @@ public class RegexWithNamedCaptureGroups {
             }
         }
         return this.match;
+    }
+
+    public Map<String,String> asKeyValuePair() {
+        Map<String,String> result = null;
+        if ( this.match ) {
+            result = new HashMap<String,String>();
+            int index=0;
+            for( String field : this.fields ) {
+                String value = this.values[index];
+                result.put(field,value);
+                index++;
+            }
+        }
+        return result;
     }
 }
