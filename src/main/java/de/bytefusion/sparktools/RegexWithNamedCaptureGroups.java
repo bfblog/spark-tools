@@ -27,16 +27,16 @@ public class RegexWithNamedCaptureGroups {
         String pattern = p.pattern();
         log.info("pattern=" + pattern );
         // regex match all capturing groups
-        Pattern p1 = Pattern.compile("\\((\\?<([^(:>=!)]+)>)?");
+        Pattern p1 = Pattern.compile("\\((\\?:?<(([^(:>=!)]+)>|=!))?");
         // find all captering groups
         Matcher m = p1.matcher(pattern);
         int count=0;
         ArrayList<String> allFields = new ArrayList<>();
         while ( m.find() ) {
             count++;
-            if ( m.groupCount() == 2 ) {
-                String groupName = m.group(2);
-                log.info( "capturing group #" + count + " is named " + groupName );
+            if ( m.groupCount() == 3 ) {
+                String groupName = m.group(3);
+                log.info( "capturing group #" + count + " is named " + groupName + " " + pattern.substring(m.start(),m.end()) );
                 // remember groupName and capturing group number
                 groups.put(groupName, Integer.valueOf(count));
                 // remember list off all field
