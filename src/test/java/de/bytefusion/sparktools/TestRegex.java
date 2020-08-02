@@ -1,6 +1,11 @@
 package de.bytefusion.sparktools;
 
 import org.apache.log4j.Logger;
+import org.apache.spark.SparkConf;
+import org.apache.spark.SparkContext;
+import org.apache.spark.sql.Dataset;
+import org.apache.spark.sql.Row;
+import org.apache.spark.sql.SparkSession;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,7 +17,7 @@ public class TestRegex {
 
     private static Logger log = Logger.getLogger( TestRegex.class );
 
-    private final static Pattern REGEX_ACCESSLOG1 =  Pattern.compile("(?<ip>(([0-9]+)(\\.[0-9]+){3}))\\s(?<d1>[^\\s]+)\\s(?<d2>[^\\s]+)\\s\\[(?<datetime>[^\\]]+)\\]\\s\"(?<request>([^\"]|(?<=\\\\)\")+)\"\\s(?<httpstatus>[0-9]+)\\s(?<size>[0-9]+)\\s\"(?<referrer>([^\"]|(?<=\\\\)\")+)\"\\s\"(?<agent>([^\"]|(?<=\\\\)\")+)\"\\s\"(?<xxxx>([^\"]|(?<=\\\\)\")+)\"");
+    private final static Pattern REGEX_ACCESSLOG1 =  Pattern.compile("(?<ip>(([0-9]+)(\\.[0-9]+){3}))\\s(?<d1>[^\\s]+)\\s(?<d2>[^\\s]+)\\s\\[(?<datetime>[^\\]]+)\\]\\s\"(?<request>((?<type>GET|POST|HEAD|DELETE|OPTIONS|TRACE|PUT|OPTIONS|TRACE) (?<uri>[^\\s]+) (HTTP/(?<httpversion>[^\\s]+))|[^\"]|(?<=\\\\)\")+)\"\\s(?<httpstatus>[0-9]+)\\s(?<size>[0-9]+)\\s\"(?<referrer>([^\"]|(?<=\\\\)\")+)\"\\s\"(?<agent>([^\"]|(?<=\\\\)\")+)\"\\s\"(?<xxxx>([^\"]|(?<=\\\\)\")+)\"");
 
     @Test
     public void test2() {
@@ -48,5 +53,10 @@ public class TestRegex {
         Assert.assertTrue( "accesslog exists", accesslog.exists() );
 
         System.out.println("Hello world!");
+    }
+
+    @Test
+    public void test3() {
+
     }
 }

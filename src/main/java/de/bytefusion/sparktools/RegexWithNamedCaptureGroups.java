@@ -1,15 +1,16 @@
 package de.bytefusion.sparktools;
 
 import org.apache.log4j.Logger;
+import org.apache.spark.sql.Dataset;
+import org.apache.spark.sql.Row;
+import scala.collection.immutable.Stream;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class RegexWithNamedCaptureGroups {
 
@@ -18,6 +19,7 @@ public class RegexWithNamedCaptureGroups {
     private String[] fields;
     private String[] values;
     private Map<String,Integer> groups = new HashMap<>();
+    private Map<String,Integer> fieldIndices = new HashMap<>();
     private Pattern p;
     private boolean match;
 
@@ -27,28 +29,49 @@ public class RegexWithNamedCaptureGroups {
         String pattern = p.pattern();
         log.info("pattern=" + pattern );
         // regex match all capturing groups
-        Pattern p1 = Pattern.compile("\\((\\?:?<(([^(:>=!)]+)>|=!))?");
+        Pattern p1 = Pattern.compile("\\((\\?(=|<=|!|<!|<((?![=!])[^>]+)>))?");
         // find all captering groups
         Matcher m = p1.matcher(pattern);
         int count=0;
         ArrayList<String> allFields = new ArrayList<>();
         while ( m.find() ) {
-            count++;
-            if ( m.groupCount() == 3 ) {
-                String groupName = m.group(3);
+            String nonCaptureGroup = m.group(2);
+            String groupName = m.group(3);
+            if ( nonCaptureGroup != null && groupName==null) {
+                String group = pattern.substring(m.start(),m.end());
+                // exclude non-capturing groups
+                if ( group.startsWith("(?=") ) {
+                    log.info( "skip positive lookahead " + pattern.substring(m.start(),m.end()) );
+                } else if ( group.startsWith("(?<=") ) {
+                    log.info( "skip positive lookbehind " + pattern.substring(m.start(),m.end()) );
+                } else if ( group.startsWith("(?!") ) {
+                    log.info( "skip negative lookahead " + pattern.substring(m.start(),m.end()) );
+                } else if ( group.startsWith("(?<!") ) {
+                    log.info( "skip negative lookbehind " + pattern.substring(m.start(),m.end()) );
+                } else {
+                    log.info( "skip other non-capturing group " + pattern.substring(m.start(),m.end()) );
+                }
+            } else if ( groupName != null ) {
+                count++;
                 log.info( "capturing group #" + count + " is named " + groupName + " " + pattern.substring(m.start(),m.end()) );
                 // remember groupName and capturing group number
                 groups.put(groupName, Integer.valueOf(count));
-                // remember list off all field
+                // remember list off all fields
                 allFields.add(groupName);
             } else {
+                count++;
                 log.info("skipping unnamed capturing group #" + count);
             }
         }
+
+        for( int index=0; index<allFields.size(); index++ ) {
+            this.fieldIndices.put( allFields.get(index), Integer.valueOf(index));
+        }
+
         this.fields = new String[allFields.size()];
         this.fields = allFields.toArray(this.fields);
         this.values = new String[allFields.size()];
-        log.info( "fields: " + Arrays.stream( this.values ).collect(Collectors.joining(",")) );
+        log.info( "fields: " + Arrays.stream( this.fields ).collect(Collectors.joining(",")) );
     }
 
     public boolean match( String text ) {
@@ -82,5 +105,14 @@ public class RegexWithNamedCaptureGroups {
             }
         }
         return result;
+    }
+
+    public Collection<String> fields() {
+        return Arrays.asList(this.fields);
+    }
+
+    public String group(String name) {
+        int index = fieldIndices.get(name).intValue();
+        return values[index];
     }
 }
