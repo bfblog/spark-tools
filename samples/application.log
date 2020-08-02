@@ -1,0 +1,351 @@
+C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.3\lib\idea_rt.jar=52287:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\charsets.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\ext\access-bridge-64.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\ext\cldrdata.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\ext\dnsns.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\ext\jaccess.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\ext\localedata.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\ext\nashorn.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\ext\sunec.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\ext\sunjce_provider.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\ext\sunmscapi.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\ext\sunpkcs11.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\ext\zipfs.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\jce.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\jfr.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\jsse.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\management-agent.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\resources.jar;C:\Users\markus\.jdks\adopt-openjdk-1.8.0_265-1\jre\lib\rt.jar;D:\workspace\bfblog\spark-tools\target\test-classes;D:\workspace\bfblog\spark-tools\target\classes;C:\Users\markus\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\markus\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\markus\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\markus\.m2\repository\org\apache\spark\spark-core_2.12\3.0.0\spark-core_2.12-3.0.0.jar;C:\Users\markus\.m2\repository\com\thoughtworks\paranamer\paranamer\2.8\paranamer-2.8.jar;C:\Users\markus\.m2\repository\org\apache\avro\avro\1.8.2\avro-1.8.2.jar;C:\Users\markus\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.9.13\jackson-core-asl-1.9.13.jar;C:\Users\markus\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.13\jackson-mapper-asl-1.9.13.jar;C:\Users\markus\.m2\repository\org\apache\commons\commons-compress\1.8.1\commons-compress-1.8.1.jar;C:\Users\markus\.m2\repository\org\tukaani\xz\1.5\xz-1.5.jar;C:\Users\markus\.m2\repository\org\apache\avro\avro-mapred\1.8.2\avro-mapred-1.8.2-hadoop2.jar;C:\Users\markus\.m2\repository\org\apache\avro\avro-ipc\1.8.2\avro-ipc-1.8.2.jar;C:\Users\markus\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;C:\Users\markus\.m2\repository\com\twitter\chill_2.12\0.9.5\chill_2.12-0.9.5.jar;C:\Users\markus\.m2\repository\com\esotericsoftware\kryo-shaded\4.0.2\kryo-shaded-4.0.2.jar;C:\Users\markus\.m2\repository\com\esotericsoftware\minlog\1.3.0\minlog-1.3.0.jar;C:\Users\markus\.m2\repository\org\objenesis\objenesis\2.5.1\objenesis-2.5.1.jar;C:\Users\markus\.m2\repository\com\twitter\chill-java\0.9.5\chill-java-0.9.5.jar;C:\Users\markus\.m2\repository\org\apache\xbean\xbean-asm7-shaded\4.15\xbean-asm7-shaded-4.15.jar;C:\Users\markus\.m2\repository\org\apache\hadoop\hadoop-client\2.7.4\hadoop-client-2.7.4.jar;C:\Users\markus\.m2\repository\org\apache\hadoop\hadoop-common\2.7.4\hadoop-common-2.7.4.jar;C:\Users\markus\.m2\repository\commons-cli\commons-cli\1.2\commons-cli-1.2.jar;C:\Users\markus\.m2\repository\xmlenc\xmlenc\0.52\xmlenc-0.52.jar;C:\Users\markus\.m2\repository\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;C:\Users\markus\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\markus\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\markus\.m2\repository\org\mortbay\jetty\jetty-sslengine\6.1.26\jetty-sslengine-6.1.26.jar;C:\Users\markus\.m2\repository\javax\servlet\jsp\jsp-api\2.1\jsp-api-2.1.jar;C:\Users\markus\.m2\repository\commons-configuration\commons-configuration\1.6\commons-configuration-1.6.jar;C:\Users\markus\.m2\repository\commons-digester\commons-digester\1.8\commons-digester-1.8.jar;C:\Users\markus\.m2\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar;C:\Users\markus\.m2\repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar;C:\Users\markus\.m2\repository\org\apache\hadoop\hadoop-auth\2.7.4\hadoop-auth-2.7.4.jar;C:\Users\markus\.m2\repository\org\apache\httpcomponents\httpclient\4.2.5\httpclient-4.2.5.jar;C:\Users\markus\.m2\repository\org\apache\httpcomponents\httpcore\4.2.4\httpcore-4.2.4.jar;C:\Users\markus\.m2\repository\org\apache\directory\server\apacheds-kerberos-codec\2.0.0-M15\apacheds-kerberos-codec-2.0.0-M15.jar;C:\Users\markus\.m2\repository\org\apache\directory\server\apacheds-i18n\2.0.0-M15\apacheds-i18n-2.0.0-M15.jar;C:\Users\markus\.m2\repository\org\apache\directory\api\api-asn1-api\1.0.0-M20\api-asn1-api-1.0.0-M20.jar;C:\Users\markus\.m2\repository\org\apache\directory\api\api-util\1.0.0-M20\api-util-1.0.0-M20.jar;C:\Users\markus\.m2\repository\org\apache\curator\curator-client\2.7.1\curator-client-2.7.1.jar;C:\Users\markus\.m2\repository\org\apache\htrace\htrace-core\3.1.0-incubating\htrace-core-3.1.0-incubating.jar;C:\Users\markus\.m2\repository\org\apache\hadoop\hadoop-hdfs\2.7.4\hadoop-hdfs-2.7.4.jar;C:\Users\markus\.m2\repository\org\mortbay\jetty\jetty-util\6.1.26\jetty-util-6.1.26.jar;C:\Users\markus\.m2\repository\xerces\xercesImpl\2.9.1\xercesImpl-2.9.1.jar;C:\Users\markus\.m2\repository\xml-apis\xml-apis\1.3.04\xml-apis-1.3.04.jar;C:\Users\markus\.m2\repository\org\apache\hadoop\hadoop-mapreduce-client-app\2.7.4\hadoop-mapreduce-client-app-2.7.4.jar;C:\Users\markus\.m2\repository\org\apache\hadoop\hadoop-mapreduce-client-common\2.7.4\hadoop-mapreduce-client-common-2.7.4.jar;C:\Users\markus\.m2\repository\org\apache\hadoop\hadoop-yarn-client\2.7.4\hadoop-yarn-client-2.7.4.jar;C:\Users\markus\.m2\repository\org\apache\hadoop\hadoop-yarn-server-common\2.7.4\hadoop-yarn-server-common-2.7.4.jar;C:\Users\markus\.m2\repository\org\apache\hadoop\hadoop-mapreduce-client-shuffle\2.7.4\hadoop-mapreduce-client-shuffle-2.7.4.jar;C:\Users\markus\.m2\repository\org\apache\hadoop\hadoop-yarn-api\2.7.4\hadoop-yarn-api-2.7.4.jar;C:\Users\markus\.m2\repository\org\apache\hadoop\hadoop-mapreduce-client-core\2.7.4\hadoop-mapreduce-client-core-2.7.4.jar;C:\Users\markus\.m2\repository\org\apache\hadoop\hadoop-yarn-common\2.7.4\hadoop-yarn-common-2.7.4.jar;C:\Users\markus\.m2\repository\javax\xml\bind\jaxb-api\2.2.2\jaxb-api-2.2.2.jar;C:\Users\markus\.m2\repository\javax\xml\stream\stax-api\1.0-2\stax-api-1.0-2.jar;C:\Users\markus\.m2\repository\org\codehaus\jackson\jackson-jaxrs\1.9.13\jackson-jaxrs-1.9.13.jar;C:\Users\markus\.m2\repository\org\codehaus\jackson\jackson-xc\1.9.13\jackson-xc-1.9.13.jar;C:\Users\markus\.m2\repository\org\apache\hadoop\hadoop-mapreduce-client-jobclient\2.7.4\hadoop-mapreduce-client-jobclient-2.7.4.jar;C:\Users\markus\.m2\repository\org\apache\hadoop\hadoop-annotations\2.7.4\hadoop-annotations-2.7.4.jar;C:\Users\markus\.m2\repository\org\apache\spark\spark-launcher_2.12\3.0.0\spark-launcher_2.12-3.0.0.jar;C:\Users\markus\.m2\repository\org\apache\spark\spark-kvstore_2.12\3.0.0\spark-kvstore_2.12-3.0.0.jar;C:\Users\markus\.m2\repository\org\fusesource\leveldbjni\leveldbjni-all\1.8\leveldbjni-all-1.8.jar;C:\Users\markus\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.0\jackson-core-2.10.0.jar;C:\Users\markus\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.0\jackson-annotations-2.10.0.jar;C:\Users\markus\.m2\repository\org\apache\spark\spark-network-common_2.12\3.0.0\spark-network-common_2.12-3.0.0.jar;C:\Users\markus\.m2\repository\org\apache\spark\spark-network-shuffle_2.12\3.0.0\spark-network-shuffle_2.12-3.0.0.jar;C:\Users\markus\.m2\repository\org\apache\spark\spark-unsafe_2.12\3.0.0\spark-unsafe_2.12-3.0.0.jar;C:\Users\markus\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\markus\.m2\repository\org\apache\curator\curator-recipes\2.7.1\curator-recipes-2.7.1.jar;C:\Users\markus\.m2\repository\org\apache\curator\curator-framework\2.7.1\curator-framework-2.7.1.jar;C:\Users\markus\.m2\repository\com\google\guava\guava\16.0.1\guava-16.0.1.jar;C:\Users\markus\.m2\repository\org\apache\zookeeper\zookeeper\3.4.14\zookeeper-3.4.14.jar;C:\Users\markus\.m2\repository\org\apache\yetus\audience-annotations\0.5.0\audience-annotations-0.5.0.jar;C:\Users\markus\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\markus\.m2\repository\org\apache\commons\commons-lang3\3.9\commons-lang3-3.9.jar;C:\Users\markus\.m2\repository\org\apache\commons\commons-math3\3.4.1\commons-math3-3.4.1.jar;C:\Users\markus\.m2\repository\org\apache\commons\commons-text\1.6\commons-text-1.6.jar;C:\Users\markus\.m2\repository\com\google\code\findbugs\jsr305\3.0.0\jsr305-3.0.0.jar;C:\Users\markus\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\markus\.m2\repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;C:\Users\markus\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\markus\.m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar;C:\Users\markus\.m2\repository\com\ning\compress-lzf\1.0.3\compress-lzf-1.0.3.jar;C:\Users\markus\.m2\repository\org\xerial\snappy\snappy-java\1.1.7.5\snappy-java-1.1.7.5.jar;C:\Users\markus\.m2\repository\org\lz4\lz4-java\1.7.1\lz4-java-1.7.1.jar;C:\Users\markus\.m2\repository\com\github\luben\zstd-jni\1.4.4-3\zstd-jni-1.4.4-3.jar;C:\Users\markus\.m2\repository\org\roaringbitmap\RoaringBitmap\0.7.45\RoaringBitmap-0.7.45.jar;C:\Users\markus\.m2\repository\org\roaringbitmap\shims\0.7.45\shims-0.7.45.jar;C:\Users\markus\.m2\repository\commons-net\commons-net\3.1\commons-net-3.1.jar;C:\Users\markus\.m2\repository\org\scala-lang\modules\scala-xml_2.12\1.2.0\scala-xml_2.12-1.2.0.jar;C:\Users\markus\.m2\repository\org\scala-lang\scala-library\2.12.10\scala-library-2.12.10.jar;C:\Users\markus\.m2\repository\org\scala-lang\scala-reflect\2.12.10\scala-reflect-2.12.10.jar;C:\Users\markus\.m2\repository\org\json4s\json4s-jackson_2.12\3.6.6\json4s-jackson_2.12-3.6.6.jar;C:\Users\markus\.m2\repository\org\json4s\json4s-core_2.12\3.6.6\json4s-core_2.12-3.6.6.jar;C:\Users\markus\.m2\repository\org\json4s\json4s-ast_2.12\3.6.6\json4s-ast_2.12-3.6.6.jar;C:\Users\markus\.m2\repository\org\json4s\json4s-scalap_2.12\3.6.6\json4s-scalap_2.12-3.6.6.jar;C:\Users\markus\.m2\repository\org\glassfish\jersey\core\jersey-client\2.30\jersey-client-2.30.jar;C:\Users\markus\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\2.1.6\jakarta.ws.rs-api-2.1.6.jar;C:\Users\markus\.m2\repository\org\glassfish\hk2\external\jakarta.inject\2.6.1\jakarta.inject-2.6.1.jar;C:\Users\markus\.m2\repository\org\glassfish\jersey\core\jersey-common\2.30\jersey-common-2.30.jar;C:\Users\markus\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\markus\.m2\repository\org\glassfish\hk2\osgi-resource-locator\1.0.3\osgi-resource-locator-1.0.3.jar;C:\Users\markus\.m2\repository\org\glassfish\jersey\core\jersey-server\2.30\jersey-server-2.30.jar;C:\Users\markus\.m2\repository\org\glassfish\jersey\media\jersey-media-jaxb\2.30\jersey-media-jaxb-2.30.jar;C:\Users\markus\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;C:\Users\markus\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet\2.30\jersey-container-servlet-2.30.jar;C:\Users\markus\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet-core\2.30\jersey-container-servlet-core-2.30.jar;C:\Users\markus\.m2\repository\org\glassfish\jersey\inject\jersey-hk2\2.30\jersey-hk2-2.30.jar;C:\Users\markus\.m2\repository\org\glassfish\hk2\hk2-locator\2.6.1\hk2-locator-2.6.1.jar;C:\Users\markus\.m2\repository\org\glassfish\hk2\external\aopalliance-repackaged\2.6.1\aopalliance-repackaged-2.6.1.jar;C:\Users\markus\.m2\repository\org\glassfish\hk2\hk2-api\2.6.1\hk2-api-2.6.1.jar;C:\Users\markus\.m2\repository\org\glassfish\hk2\hk2-utils\2.6.1\hk2-utils-2.6.1.jar;C:\Users\markus\.m2\repository\org\javassist\javassist\3.25.0-GA\javassist-3.25.0-GA.jar;C:\Users\markus\.m2\repository\io\netty\netty-all\4.1.47.Final\netty-all-4.1.47.Final.jar;C:\Users\markus\.m2\repository\com\clearspring\analytics\stream\2.9.6\stream-2.9.6.jar;C:\Users\markus\.m2\repository\io\dropwizard\metrics\metrics-core\4.1.1\metrics-core-4.1.1.jar;C:\Users\markus\.m2\repository\io\dropwizard\metrics\metrics-jvm\4.1.1\metrics-jvm-4.1.1.jar;C:\Users\markus\.m2\repository\io\dropwizard\metrics\metrics-json\4.1.1\metrics-json-4.1.1.jar;C:\Users\markus\.m2\repository\io\dropwizard\metrics\metrics-graphite\4.1.1\metrics-graphite-4.1.1.jar;C:\Users\markus\.m2\repository\io\dropwizard\metrics\metrics-jmx\4.1.1\metrics-jmx-4.1.1.jar;C:\Users\markus\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.0\jackson-databind-2.10.0.jar;C:\Users\markus\.m2\repository\com\fasterxml\jackson\module\jackson-module-scala_2.12\2.10.0\jackson-module-scala_2.12-2.10.0.jar;C:\Users\markus\.m2\repository\com\fasterxml\jackson\module\jackson-module-paranamer\2.10.0\jackson-module-paranamer-2.10.0.jar;C:\Users\markus\.m2\repository\org\apache\ivy\ivy\2.4.0\ivy-2.4.0.jar;C:\Users\markus\.m2\repository\oro\oro\2.0.8\oro-2.0.8.jar;C:\Users\markus\.m2\repository\net\razorvine\pyrolite\4.30\pyrolite-4.30.jar;C:\Users\markus\.m2\repository\net\sf\py4j\py4j\0.10.9\py4j-0.10.9.jar;C:\Users\markus\.m2\repository\org\apache\spark\spark-tags_2.12\3.0.0\spark-tags_2.12-3.0.0.jar;C:\Users\markus\.m2\repository\org\apache\commons\commons-crypto\1.0.0\commons-crypto-1.0.0.jar;C:\Users\markus\.m2\repository\org\spark-project\spark\unused\1.0.0\unused-1.0.0.jar;C:\Users\markus\.m2\repository\org\apache\spark\spark-sql_2.12\3.0.0\spark-sql_2.12-3.0.0.jar;C:\Users\markus\.m2\repository\com\univocity\univocity-parsers\2.8.3\univocity-parsers-2.8.3.jar;C:\Users\markus\.m2\repository\org\apache\spark\spark-sketch_2.12\3.0.0\spark-sketch_2.12-3.0.0.jar;C:\Users\markus\.m2\repository\org\apache\spark\spark-catalyst_2.12\3.0.0\spark-catalyst_2.12-3.0.0.jar;C:\Users\markus\.m2\repository\org\scala-lang\modules\scala-parser-combinators_2.12\1.1.2\scala-parser-combinators_2.12-1.1.2.jar;C:\Users\markus\.m2\repository\org\codehaus\janino\janino\3.0.16\janino-3.0.16.jar;C:\Users\markus\.m2\repository\org\codehaus\janino\commons-compiler\3.0.16\commons-compiler-3.0.16.jar;C:\Users\markus\.m2\repository\org\antlr\antlr4-runtime\4.7.1\antlr4-runtime-4.7.1.jar;C:\Users\markus\.m2\repository\org\apache\arrow\arrow-vector\0.15.1\arrow-vector-0.15.1.jar;C:\Users\markus\.m2\repository\org\apache\arrow\arrow-format\0.15.1\arrow-format-0.15.1.jar;C:\Users\markus\.m2\repository\org\apache\arrow\arrow-memory\0.15.1\arrow-memory-0.15.1.jar;C:\Users\markus\.m2\repository\com\google\flatbuffers\flatbuffers-java\1.9.0\flatbuffers-java-1.9.0.jar;C:\Users\markus\.m2\repository\org\apache\orc\orc-core\1.5.10\orc-core-1.5.10.jar;C:\Users\markus\.m2\repository\org\apache\orc\orc-shims\1.5.10\orc-shims-1.5.10.jar;C:\Users\markus\.m2\repository\com\google\protobuf\protobuf-java\2.5.0\protobuf-java-2.5.0.jar;C:\Users\markus\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\markus\.m2\repository\io\airlift\aircompressor\0.10\aircompressor-0.10.jar;C:\Users\markus\.m2\repository\org\threeten\threeten-extra\1.5.0\threeten-extra-1.5.0.jar;C:\Users\markus\.m2\repository\org\apache\orc\orc-mapreduce\1.5.10\orc-mapreduce-1.5.10.jar;C:\Users\markus\.m2\repository\org\apache\hive\hive-storage-api\2.7.1\hive-storage-api-2.7.1.jar;C:\Users\markus\.m2\repository\org\apache\parquet\parquet-column\1.10.1\parquet-column-1.10.1.jar;C:\Users\markus\.m2\repository\org\apache\parquet\parquet-common\1.10.1\parquet-common-1.10.1.jar;C:\Users\markus\.m2\repository\org\apache\parquet\parquet-encoding\1.10.1\parquet-encoding-1.10.1.jar;C:\Users\markus\.m2\repository\org\apache\parquet\parquet-hadoop\1.10.1\parquet-hadoop-1.10.1.jar;C:\Users\markus\.m2\repository\org\apache\parquet\parquet-format\2.4.0\parquet-format-2.4.0.jar;C:\Users\markus\.m2\repository\org\apache\parquet\parquet-jackson\1.10.1\parquet-jackson-1.10.1.jar de.bytefusion.sparktools.Example1
+INFO    2020-08-02 15:58:49,689 [main] org.apache.spark.SparkContext  - Running Spark version 3.0.0
+WARN    2020-08-02 15:58:49,937 [main] org.apache.hadoop.util.NativeCodeLoader  - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+INFO    2020-08-02 15:58:50,057 [main] org.apache.spark.resource.ResourceUtils  - ==============================================================
+INFO    2020-08-02 15:58:50,058 [main] org.apache.spark.resource.ResourceUtils  - Resources for spark.driver:
+
+INFO    2020-08-02 15:58:50,059 [main] org.apache.spark.resource.ResourceUtils  - ==============================================================
+INFO    2020-08-02 15:58:50,060 [main] org.apache.spark.SparkContext  - Submitted application: regex
+INFO    2020-08-02 15:58:50,139 [main] org.apache.spark.SecurityManager  - Changing view acls to: markus
+INFO    2020-08-02 15:58:50,139 [main] org.apache.spark.SecurityManager  - Changing modify acls to: markus
+INFO    2020-08-02 15:58:50,140 [main] org.apache.spark.SecurityManager  - Changing view acls groups to:
+INFO    2020-08-02 15:58:50,140 [main] org.apache.spark.SecurityManager  - Changing modify acls groups to:
+INFO    2020-08-02 15:58:50,141 [main] org.apache.spark.SecurityManager  - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(markus); groups with view permissions: Set(); users  with modify permissions: Set(markus); groups with modify permissions: Set()
+INFO    2020-08-02 15:58:52,172 [main] org.apache.spark.util.Utils  - Successfully started service 'sparkDriver' on port 52301.
+INFO    2020-08-02 15:58:52,195 [main] org.apache.spark.SparkEnv  - Registering MapOutputTracker
+INFO    2020-08-02 15:58:52,231 [main] org.apache.spark.SparkEnv  - Registering BlockManagerMaster
+INFO    2020-08-02 15:58:52,254 [main] org.apache.spark.storage.BlockManagerMasterEndpoint  - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+INFO    2020-08-02 15:58:52,255 [main] org.apache.spark.storage.BlockManagerMasterEndpoint  - BlockManagerMasterEndpoint up
+INFO    2020-08-02 15:58:52,258 [main] org.apache.spark.SparkEnv  - Registering BlockManagerMasterHeartbeat
+INFO    2020-08-02 15:58:52,271 [main] org.apache.spark.storage.DiskBlockManager  - Created local directory at C:\Users\markus\AppData\Local\Temp\blockmgr-c9a737fa-1686-4fb7-a74e-82f0f30ba532
+INFO    2020-08-02 15:58:52,298 [main] org.apache.spark.storage.memory.MemoryStore  - MemoryStore started with capacity 1995.0 MiB
+INFO    2020-08-02 15:58:52,313 [main] org.apache.spark.SparkEnv  - Registering OutputCommitCoordinator
+INFO    2020-08-02 15:58:52,402 [main] org.sparkproject.jetty.util.log  - Logging initialized @8369ms to org.sparkproject.jetty.util.log.Slf4jLog
+INFO    2020-08-02 15:58:52,468 [main] org.sparkproject.jetty.server.Server  - jetty-9.4.z-SNAPSHOT; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_265-b01
+INFO    2020-08-02 15:58:52,490 [main] org.sparkproject.jetty.server.Server  - Started @8458ms
+INFO    2020-08-02 15:58:52,518 [main] org.sparkproject.jetty.server.AbstractConnector  - Started ServerConnector@5af28b27{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+INFO    2020-08-02 15:58:52,518 [main] org.apache.spark.util.Utils  - Successfully started service 'SparkUI' on port 4040.
+INFO    2020-08-02 15:58:52,538 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@7f811d00{/jobs,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,540 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@3bffddff{/jobs/json,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,540 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@50687efb{/jobs/job,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,541 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@4a9cc6cb{/jobs/job/json,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,542 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@56e07a08{/stages,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,542 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@1950e8a6{/stages/json,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,543 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@12cd9150{/stages/stage,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,544 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@724f138e{/stages/stage/json,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,545 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@32fe9d0a{/stages/pool,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,545 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@64da2a7{/stages/pool/json,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,546 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@d78795{/storage,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,546 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@47428937{/storage/json,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,547 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@7caa550{/storage/rdd,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,547 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@72b16078{/storage/rdd/json,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,548 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@70fab835{/environment,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,548 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@62417a16{/environment/json,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,549 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@26be6ca7{/executors,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,549 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@759fad4{/executors/json,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,550 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@53499d85{/executors/threadDump,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,551 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@782a4fff{/executors/threadDump/json,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,558 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@59fc684e{/static,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,559 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@363f6148{/,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,560 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@1b28f282{/api,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,563 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@29876704{/jobs/job/kill,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,564 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@4940809c{/stages/stage/kill,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:52,566 [main] org.apache.spark.ui.SparkUI  - Bound SparkUI to 0.0.0.0, and started at http://blackhawk:4040
+INFO    2020-08-02 15:58:52,727 [main] org.apache.spark.executor.Executor  - Starting executor ID driver on host blackhawk
+INFO    2020-08-02 15:58:52,753 [main] org.apache.spark.util.Utils  - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 52316.
+INFO    2020-08-02 15:58:52,753 [main] org.apache.spark.network.netty.NettyBlockTransferService  - Server created on blackhawk:52316
+INFO    2020-08-02 15:58:52,755 [main] org.apache.spark.storage.BlockManager  - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+INFO    2020-08-02 15:58:52,761 [main] org.apache.spark.storage.BlockManagerMaster  - Registering BlockManager BlockManagerId(driver, blackhawk, 52316, None)
+INFO    2020-08-02 15:58:52,764 [dispatcher-BlockManagerMaster] org.apache.spark.storage.BlockManagerMasterEndpoint  - Registering block manager blackhawk:52316 with 1995.0 MiB RAM, BlockManagerId(driver, blackhawk, 52316, None)
+INFO    2020-08-02 15:58:52,767 [main] org.apache.spark.storage.BlockManagerMaster  - Registered BlockManager BlockManagerId(driver, blackhawk, 52316, None)
+INFO    2020-08-02 15:58:52,769 [main] org.apache.spark.storage.BlockManager  - Initialized BlockManager: BlockManagerId(driver, blackhawk, 52316, None)
+INFO    2020-08-02 15:58:52,954 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@17d238b1{/metrics/json,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:53,270 [main] org.apache.spark.sql.internal.SharedState  - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/D:/workspace/bfblog/spark-tools/spark-warehouse').
+INFO    2020-08-02 15:58:53,270 [main] org.apache.spark.sql.internal.SharedState  - Warehouse path is 'file:/D:/workspace/bfblog/spark-tools/spark-warehouse'.
+INFO    2020-08-02 15:58:53,294 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@2e3cdec2{/SQL,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:53,295 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@3051e0b2{/SQL/json,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:53,296 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@6fc3e1a4{/SQL/execution,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:53,297 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@2d5f7182{/SQL/execution/json,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:53,324 [main] org.sparkproject.jetty.server.handler.ContextHandler  - Started o.s.j.s.ServletContextHandler@7b3315a5{/static/sql,null,AVAILABLE,@Spark}
+INFO    2020-08-02 15:58:54,193 [main] org.apache.spark.sql.execution.datasources.InMemoryFileIndex  - It took 34 ms to list leaf files for 1 paths.
+INFO    2020-08-02 15:58:56,115 [main] org.apache.spark.sql.execution.datasources.FileSourceStrategy  - Pruning directories with:
+INFO    2020-08-02 15:58:56,121 [main] org.apache.spark.sql.execution.datasources.FileSourceStrategy  - Pushed Filters:
+INFO    2020-08-02 15:58:56,122 [main] org.apache.spark.sql.execution.datasources.FileSourceStrategy  - Post-Scan Filters:
+INFO    2020-08-02 15:58:56,136 [main] org.apache.spark.sql.execution.datasources.FileSourceStrategy  - Output Data Schema: struct<value: string>
+INFO    2020-08-02 15:58:56,742 [main] org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator  - Code generated in 191.6671 ms
+INFO    2020-08-02 15:58:56,798 [main] org.apache.spark.storage.memory.MemoryStore  - Block broadcast_0 stored as values in memory (estimated size 284.0 KiB, free 1994.7 MiB)
+INFO    2020-08-02 15:58:58,182 [main] org.apache.spark.storage.memory.MemoryStore  - Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.7 KiB, free 1994.7 MiB)
+INFO    2020-08-02 15:58:58,185 [dispatcher-BlockManagerMaster] org.apache.spark.storage.BlockManagerInfo  - Added broadcast_0_piece0 in memory on blackhawk:52316 (size: 23.7 KiB, free: 1995.0 MiB)
+INFO    2020-08-02 15:58:58,188 [main] org.apache.spark.SparkContext  - Created broadcast 0 from show at Example1.java:31
+INFO    2020-08-02 15:58:58,196 [main] org.apache.spark.sql.execution.FileSourceScanExec  - Planning scan with bin packing, max size: 4198451 bytes, open cost is considered as scanning 4194304 bytes.
+INFO    2020-08-02 15:58:58,323 [main] org.apache.spark.SparkContext  - Starting job: show at Example1.java:31
+INFO    2020-08-02 15:58:58,341 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Got job 0 (show at Example1.java:31) with 1 output partitions
+INFO    2020-08-02 15:58:58,341 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Final stage: ResultStage 0 (show at Example1.java:31)
+INFO    2020-08-02 15:58:58,341 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Parents of final stage: List()
+INFO    2020-08-02 15:58:58,343 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Missing parents: List()
+INFO    2020-08-02 15:58:58,347 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Submitting ResultStage 0 (MapPartitionsRDD[3] at show at Example1.java:31), which has no missing parents
+INFO    2020-08-02 15:58:58,432 [dag-scheduler-event-loop] org.apache.spark.storage.memory.MemoryStore  - Block broadcast_1 stored as values in memory (estimated size 10.2 KiB, free 1994.7 MiB)
+INFO    2020-08-02 15:58:58,435 [dag-scheduler-event-loop] org.apache.spark.storage.memory.MemoryStore  - Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.0 KiB, free 1994.7 MiB)
+INFO    2020-08-02 15:58:58,436 [dispatcher-BlockManagerMaster] org.apache.spark.storage.BlockManagerInfo  - Added broadcast_1_piece0 in memory on blackhawk:52316 (size: 5.0 KiB, free: 1995.0 MiB)
+INFO    2020-08-02 15:58:58,436 [dag-scheduler-event-loop] org.apache.spark.SparkContext  - Created broadcast 1 from broadcast at DAGScheduler.scala:1200
+INFO    2020-08-02 15:58:58,451 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at show at Example1.java:31) (first 15 tasks are for partitions Vector(0))
+INFO    2020-08-02 15:58:58,452 [dag-scheduler-event-loop] org.apache.spark.scheduler.TaskSchedulerImpl  - Adding task set 0.0 with 1 tasks
+INFO    2020-08-02 15:58:58,498 [dispatcher-event-loop-0] org.apache.spark.scheduler.TaskSetManager  - Starting task 0.0 in stage 0.0 (TID 0, blackhawk, executor driver, partition 0, PROCESS_LOCAL, 7755 bytes)
+INFO    2020-08-02 15:58:58,507 [Executor task launch worker for task 0] org.apache.spark.executor.Executor  - Running task 0.0 in stage 0.0 (TID 0)
+INFO    2020-08-02 15:58:58,841 [Executor task launch worker for task 0] org.apache.spark.sql.execution.datasources.FileScanRDD  - Reading File path: file:///D:/workspace/bfblog/spark-tools/samples/access.log, range: 0-4147, partition values: [empty row]
+INFO    2020-08-02 15:58:58,863 [Executor task launch worker for task 0] org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator  - Code generated in 13.402 ms
+INFO    2020-08-02 15:58:58,901 [Executor task launch worker for task 0] org.apache.spark.executor.Executor  - Finished task 0.0 in stage 0.0 (TID 0). 2113 bytes result sent to driver
+INFO    2020-08-02 15:58:58,907 [task-result-getter-0] org.apache.spark.scheduler.TaskSetManager  - Finished task 0.0 in stage 0.0 (TID 0) in 417 ms on blackhawk (executor driver) (1/1)
+INFO    2020-08-02 15:58:58,910 [task-result-getter-0] org.apache.spark.scheduler.TaskSchedulerImpl  - Removed TaskSet 0.0, whose tasks have all completed, from pool
+INFO    2020-08-02 15:58:58,915 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - ResultStage 0 (show at Example1.java:31) finished in 0,553 s
+INFO    2020-08-02 15:58:58,919 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+INFO    2020-08-02 15:58:58,919 [dag-scheduler-event-loop] org.apache.spark.scheduler.TaskSchedulerImpl  - Killing all running tasks in stage 0: Stage finished
+INFO    2020-08-02 15:58:58,921 [main] org.apache.spark.scheduler.DAGScheduler  - Job 0 finished: show at Example1.java:31, took 0,598064 s
+INFO    2020-08-02 15:58:58,962 [main] org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator  - Code generated in 20.362 ms
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+
+|                                                                                                                                                                                                                value|                                                  filename|
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+
+|                                                 109.169.248.247 - - [12/Dec/2015:18:25:11 +0100] "GET /administrator/ HTTP/1.1" 200 4263 "-" "Mozilla/5.0 (Windows NT 6.0; rv:34.0) Gecko/20100101 Firefox/34.0" "-"|file:///D:/workspace/bfblog/spark-tools/samples/access.log|
+|109.169.248.247 - - [12/Dec/2015:18:25:11 +0100] "POST /administrator/index.php HTTP/1.1" 200 4494 "http://almhuette-raith.at/administrator/" "Mozilla/5.0 (Windows NT 6.0; rv:34.0) Gecko/20100101 Firefox/34.0" "-"|file:///D:/workspace/bfblog/spark-tools/samples/access.log|
+|                                                     46.72.177.4 - - [12/Dec/2015:18:31:08 +0100] "GET /administrator/ HTTP/1.1" 200 4263 "-" "Mozilla/5.0 (Windows NT 6.0; rv:34.0) Gecko/20100101 Firefox/34.0" "-"|file:///D:/workspace/bfblog/spark-tools/samples/access.log|
+|    46.72.177.4 - - [12/Dec/2015:18:31:08 +0100] "POST /administrator/index.php HTTP/1.1" 200 4494 "http://almhuette-raith.at/administrator/" "Mozilla/5.0 (Windows NT 6.0; rv:34.0) Gecko/20100101 Firefox/34.0" "-"|file:///D:/workspace/bfblog/spark-tools/samples/access.log|
+|                                                  83.167.113.100 - - [12/Dec/2015:18:31:25 +0100] "GET /administrator/ HTTP/1.1" 200 4263 "-" "Mozilla/5.0 (Windows NT 6.0; rv:34.0) Gecko/20100101 Firefox/34.0" "-"|file:///D:/workspace/bfblog/spark-tools/samples/access.log|
+| 83.167.113.100 - - [12/Dec/2015:18:31:25 +0100] "POST /administrator/index.php HTTP/1.1" 200 4494 "http://almhuette-raith.at/administrator/" "Mozilla/5.0 (Windows NT 6.0; rv:34.0) Gecko/20100101 Firefox/34.0" "-"|file:///D:/workspace/bfblog/spark-tools/samples/access.log|
+|                                                    95.29.198.15 - - [12/Dec/2015:18:32:10 +0100] "GET /administrator/ HTTP/1.1" 200 4263 "-" "Mozilla/5.0 (Windows NT 6.0; rv:34.0) Gecko/20100101 Firefox/34.0" "-"|file:///D:/workspace/bfblog/spark-tools/samples/access.log|
+|   95.29.198.15 - - [12/Dec/2015:18:32:11 +0100] "POST /administrator/index.php HTTP/1.1" 200 4494 "http://almhuette-raith.at/administrator/" "Mozilla/5.0 (Windows NT 6.0; rv:34.0) Gecko/20100101 Firefox/34.0" "-"|file:///D:/workspace/bfblog/spark-tools/samples/access.log|
+|                                                   109.184.11.34 - - [12/Dec/2015:18:32:56 +0100] "GET /administrator/ HTTP/1.1" 200 4263 "-" "Mozilla/5.0 (Windows NT 6.0; rv:34.0) Gecko/20100101 Firefox/34.0" "-"|file:///D:/workspace/bfblog/spark-tools/samples/access.log|
+|  109.184.11.34 - - [12/Dec/2015:18:32:56 +0100] "POST /administrator/index.php HTTP/1.1" 200 4494 "http://almhuette-raith.at/administrator/" "Mozilla/5.0 (Windows NT 6.0; rv:34.0) Gecko/20100101 Firefox/34.0" "-"|file:///D:/workspace/bfblog/spark-tools/samples/access.log|
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------+
+only showing top 10 rows
+
+INFO    2020-08-02 15:58:58,987 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - pattern=(?<ip>(([0-9]+)(\.[0-9]+){3}))\s(?<identd>[^\s]+)\s(?<user>[^\s]+)\s\[(?<datetime>[^\]]+)\]\s"(?<request>((?<type>GET|POST|HEAD|DELETE|OPTIONS|TRACE|PUT|OPTIONS|TRACE) (?<uri>[^\s]+) (HTTP/(?<httpversion>[^\s]+))|[^"]|(?<=\\)")+)"\s(?<httpstatus>[0-9]+)\s(?<size>[0-9]+)\s"(?<referrer>([^"]|(?<=\\)")+)"\s"(?<agent>([^"]|(?<=\\)")+)"\s"(?<xxxx>([^"]|(?<=\\)")+)"
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #1 is named ip (?<ip>
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #2
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #3
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #4
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #5 is named identd (?<identd>
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #6 is named user (?<user>
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #7 is named datetime (?<datetime>
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #8 is named request (?<request>
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #9
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #10 is named type (?<type>
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #11 is named uri (?<uri>
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #12
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #13 is named httpversion (?<httpversion>
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skip positive lookbehind (?<=
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #14 is named httpstatus (?<httpstatus>
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #15 is named size (?<size>
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #16 is named referrer (?<referrer>
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #17
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skip positive lookbehind (?<=
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #18 is named agent (?<agent>
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #19
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skip positive lookbehind (?<=
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #20 is named xxxx (?<xxxx>
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #21
+INFO    2020-08-02 15:58:58,988 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skip positive lookbehind (?<=
+INFO    2020-08-02 15:58:58,991 [main] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - fields: ip,identd,user,datetime,request,type,uri,httpversion,httpstatus,size,referrer,agent,xxxx
+INFO    2020-08-02 15:58:59,195 [main] org.apache.spark.sql.execution.datasources.FileSourceStrategy  - Pruning directories with:
+INFO    2020-08-02 15:58:59,195 [main] org.apache.spark.sql.execution.datasources.FileSourceStrategy  - Pushed Filters:
+INFO    2020-08-02 15:58:59,195 [main] org.apache.spark.sql.execution.datasources.FileSourceStrategy  - Post-Scan Filters:
+INFO    2020-08-02 15:58:59,195 [main] org.apache.spark.sql.execution.datasources.FileSourceStrategy  - Output Data Schema: struct<value: string>
+INFO    2020-08-02 15:58:59,253 [main] org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator  - Code generated in 29.2183 ms
+INFO    2020-08-02 15:58:59,260 [main] org.apache.spark.storage.memory.MemoryStore  - Block broadcast_2 stored as values in memory (estimated size 284.0 KiB, free 1994.4 MiB)
+INFO    2020-08-02 15:58:59,273 [main] org.apache.spark.storage.memory.MemoryStore  - Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.7 KiB, free 1994.4 MiB)
+INFO    2020-08-02 15:58:59,274 [dispatcher-BlockManagerMaster] org.apache.spark.storage.BlockManagerInfo  - Added broadcast_2_piece0 in memory on blackhawk:52316 (size: 23.7 KiB, free: 1994.9 MiB)
+INFO    2020-08-02 15:58:59,275 [main] org.apache.spark.SparkContext  - Created broadcast 2 from show at Example1.java:35
+INFO    2020-08-02 15:58:59,275 [main] org.apache.spark.sql.execution.FileSourceScanExec  - Planning scan with bin packing, max size: 4198451 bytes, open cost is considered as scanning 4194304 bytes.
+INFO    2020-08-02 15:58:59,288 [main] org.apache.spark.SparkContext  - Starting job: show at Example1.java:35
+INFO    2020-08-02 15:58:59,290 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Got job 1 (show at Example1.java:35) with 1 output partitions
+INFO    2020-08-02 15:58:59,290 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Final stage: ResultStage 1 (show at Example1.java:35)
+INFO    2020-08-02 15:58:59,290 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Parents of final stage: List()
+INFO    2020-08-02 15:58:59,290 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Missing parents: List()
+INFO    2020-08-02 15:58:59,291 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Submitting ResultStage 1 (MapPartitionsRDD[7] at show at Example1.java:35), which has no missing parents
+INFO    2020-08-02 15:58:59,294 [dag-scheduler-event-loop] org.apache.spark.storage.memory.MemoryStore  - Block broadcast_3 stored as values in memory (estimated size 19.3 KiB, free 1994.4 MiB)
+INFO    2020-08-02 15:58:59,297 [dag-scheduler-event-loop] org.apache.spark.storage.memory.MemoryStore  - Block broadcast_3_piece0 stored as bytes in memory (estimated size 7.5 KiB, free 1994.4 MiB)
+INFO    2020-08-02 15:58:59,298 [dispatcher-BlockManagerMaster] org.apache.spark.storage.BlockManagerInfo  - Added broadcast_3_piece0 in memory on blackhawk:52316 (size: 7.5 KiB, free: 1994.9 MiB)
+INFO    2020-08-02 15:58:59,298 [dag-scheduler-event-loop] org.apache.spark.SparkContext  - Created broadcast 3 from broadcast at DAGScheduler.scala:1200
+INFO    2020-08-02 15:58:59,299 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[7] at show at Example1.java:35) (first 15 tasks are for partitions Vector(0))
+INFO    2020-08-02 15:58:59,299 [dag-scheduler-event-loop] org.apache.spark.scheduler.TaskSchedulerImpl  - Adding task set 1.0 with 1 tasks
+INFO    2020-08-02 15:58:59,300 [dispatcher-event-loop-1] org.apache.spark.scheduler.TaskSetManager  - Starting task 0.0 in stage 1.0 (TID 1, blackhawk, executor driver, partition 0, PROCESS_LOCAL, 7755 bytes)
+INFO    2020-08-02 15:58:59,301 [Executor task launch worker for task 1] org.apache.spark.executor.Executor  - Running task 0.0 in stage 1.0 (TID 1)
+INFO    2020-08-02 15:58:59,340 [Executor task launch worker for task 1] org.apache.spark.sql.execution.datasources.FileScanRDD  - Reading File path: file:///D:/workspace/bfblog/spark-tools/samples/access.log, range: 0-4147, partition values: [empty row]
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - pattern=(?<ip>(([0-9]+)(\.[0-9]+){3}))\s(?<identd>[^\s]+)\s(?<user>[^\s]+)\s\[(?<datetime>[^\]]+)\]\s"(?<request>((?<type>GET|POST|HEAD|DELETE|OPTIONS|TRACE|PUT|OPTIONS|TRACE) (?<uri>[^\s]+) (HTTP/(?<httpversion>[^\s]+))|[^"]|(?<=\\)")+)"\s(?<httpstatus>[0-9]+)\s(?<size>[0-9]+)\s"(?<referrer>([^"]|(?<=\\)")+)"\s"(?<agent>([^"]|(?<=\\)")+)"\s"(?<xxxx>([^"]|(?<=\\)")+)"
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #1 is named ip (?<ip>
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #2
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #3
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #4
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #5 is named identd (?<identd>
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #6 is named user (?<user>
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #7 is named datetime (?<datetime>
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #8 is named request (?<request>
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #9
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #10 is named type (?<type>
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #11 is named uri (?<uri>
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #12
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #13 is named httpversion (?<httpversion>
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skip positive lookbehind (?<=
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #14 is named httpstatus (?<httpstatus>
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #15 is named size (?<size>
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #16 is named referrer (?<referrer>
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #17
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skip positive lookbehind (?<=
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #18 is named agent (?<agent>
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #19
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skip positive lookbehind (?<=
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #20 is named xxxx (?<xxxx>
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #21
+INFO    2020-08-02 15:58:59,345 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skip positive lookbehind (?<=
+INFO    2020-08-02 15:58:59,346 [Executor task launch worker for task 1] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - fields: ip,identd,user,datetime,request,type,uri,httpversion,httpstatus,size,referrer,agent,xxxx
+INFO    2020-08-02 15:58:59,356 [Executor task launch worker for task 1] org.apache.spark.executor.Executor  - Finished task 0.0 in stage 1.0 (TID 1). 2825 bytes result sent to driver
+INFO    2020-08-02 15:58:59,358 [task-result-getter-1] org.apache.spark.scheduler.TaskSetManager  - Finished task 0.0 in stage 1.0 (TID 1) in 58 ms on blackhawk (executor driver) (1/1)
+INFO    2020-08-02 15:58:59,358 [task-result-getter-1] org.apache.spark.scheduler.TaskSchedulerImpl  - Removed TaskSet 1.0, whose tasks have all completed, from pool
+INFO    2020-08-02 15:58:59,359 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - ResultStage 1 (show at Example1.java:35) finished in 0,067 s
+INFO    2020-08-02 15:58:59,359 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+INFO    2020-08-02 15:58:59,359 [dag-scheduler-event-loop] org.apache.spark.scheduler.TaskSchedulerImpl  - Killing all running tasks in stage 1: Stage finished
+INFO    2020-08-02 15:58:59,360 [main] org.apache.spark.scheduler.DAGScheduler  - Job 1 finished: show at Example1.java:35, took 0,070862 s
+INFO    2020-08-02 15:58:59,378 [main] org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator  - Code generated in 13.439501 ms
++--------------------+--------------------+--------------------+
+|               value|            filename|                   x|
++--------------------+--------------------+--------------------+
+|109.169.248.247 -...|file:///D:/worksp...|[109.169.248.247,...|
+|109.169.248.247 -...|file:///D:/worksp...|[109.169.248.247,...|
+|46.72.177.4 - - [...|file:///D:/worksp...|[46.72.177.4, -, ...|
+|46.72.177.4 - - [...|file:///D:/worksp...|[46.72.177.4, -, ...|
+|83.167.113.100 - ...|file:///D:/worksp...|[83.167.113.100, ...|
+|83.167.113.100 - ...|file:///D:/worksp...|[83.167.113.100, ...|
+|95.29.198.15 - - ...|file:///D:/worksp...|[95.29.198.15, -,...|
+|95.29.198.15 - - ...|file:///D:/worksp...|[95.29.198.15, -,...|
+|109.184.11.34 - -...|file:///D:/worksp...|[109.184.11.34, -...|
+|109.184.11.34 - -...|file:///D:/worksp...|[109.184.11.34, -...|
+|91.227.29.79 - - ...|file:///D:/worksp...|[91.227.29.79, -,...|
+|91.227.29.79 - - ...|file:///D:/worksp...|[91.227.29.79, -,...|
+|90.154.66.233 - -...|file:///D:/worksp...|[90.154.66.233, -...|
+|90.154.66.233 - -...|file:///D:/worksp...|[90.154.66.233, -...|
+|95.140.24.131 - -...|file:///D:/worksp...|[95.140.24.131, -...|
+|95.140.24.131 - -...|file:///D:/worksp...|[95.140.24.131, -...|
+|95.188.245.16 - -...|file:///D:/worksp...|[95.188.245.16, -...|
+|95.188.245.16 - -...|file:///D:/worksp...|[95.188.245.16, -...|
+|46.72.213.133 - -...|file:///D:/worksp...|[46.72.213.133, -...|
+|46.72.213.133 - -...|file:///D:/worksp...|[46.72.213.133, -...|
++--------------------+--------------------+--------------------+
+only showing top 20 rows
+
+root
+ |-- value: string (nullable = true)
+ |-- filename: string (nullable = false)
+ |-- x: struct (nullable = true)
+ |    |-- ip: string (nullable = true)
+ |    |-- identd: string (nullable = true)
+ |    |-- user: string (nullable = true)
+ |    |-- datetime: string (nullable = true)
+ |    |-- request: string (nullable = true)
+ |    |-- type: string (nullable = true)
+ |    |-- uri: string (nullable = true)
+ |    |-- httpversion: string (nullable = true)
+ |    |-- httpstatus: string (nullable = true)
+ |    |-- size: string (nullable = true)
+ |    |-- referrer: string (nullable = true)
+ |    |-- agent: string (nullable = true)
+ |    |-- xxxx: string (nullable = true)
+
+INFO    2020-08-02 15:58:59,487 [main] org.apache.spark.sql.execution.datasources.FileSourceStrategy  - Pruning directories with:
+INFO    2020-08-02 15:58:59,487 [main] org.apache.spark.sql.execution.datasources.FileSourceStrategy  - Pushed Filters:
+INFO    2020-08-02 15:58:59,487 [main] org.apache.spark.sql.execution.datasources.FileSourceStrategy  - Post-Scan Filters:
+INFO    2020-08-02 15:58:59,487 [main] org.apache.spark.sql.execution.datasources.FileSourceStrategy  - Output Data Schema: struct<value: string>
+INFO    2020-08-02 15:58:59,568 [main] org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator  - Code generated in 45.518801 ms
+INFO    2020-08-02 15:58:59,574 [main] org.apache.spark.storage.memory.MemoryStore  - Block broadcast_4 stored as values in memory (estimated size 284.0 KiB, free 1994.1 MiB)
+INFO    2020-08-02 15:58:59,590 [main] org.apache.spark.storage.memory.MemoryStore  - Block broadcast_4_piece0 stored as bytes in memory (estimated size 23.7 KiB, free 1994.1 MiB)
+INFO    2020-08-02 15:58:59,595 [dispatcher-BlockManagerMaster] org.apache.spark.storage.BlockManagerInfo  - Added broadcast_4_piece0 in memory on blackhawk:52316 (size: 23.7 KiB, free: 1994.9 MiB)
+INFO    2020-08-02 15:58:59,596 [main] org.apache.spark.SparkContext  - Created broadcast 4 from show at Example1.java:37
+INFO    2020-08-02 15:58:59,596 [main] org.apache.spark.sql.execution.FileSourceScanExec  - Planning scan with bin packing, max size: 4198451 bytes, open cost is considered as scanning 4194304 bytes.
+INFO    2020-08-02 15:58:59,606 [main] org.apache.spark.SparkContext  - Starting job: show at Example1.java:37
+INFO    2020-08-02 15:58:59,608 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Got job 2 (show at Example1.java:37) with 1 output partitions
+INFO    2020-08-02 15:58:59,608 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Final stage: ResultStage 2 (show at Example1.java:37)
+INFO    2020-08-02 15:58:59,608 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Parents of final stage: List()
+INFO    2020-08-02 15:58:59,609 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Missing parents: List()
+INFO    2020-08-02 15:58:59,609 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Submitting ResultStage 2 (MapPartitionsRDD[11] at show at Example1.java:37), which has no missing parents
+INFO    2020-08-02 15:58:59,613 [dag-scheduler-event-loop] org.apache.spark.storage.memory.MemoryStore  - Block broadcast_5 stored as values in memory (estimated size 31.2 KiB, free 1994.0 MiB)
+INFO    2020-08-02 15:58:59,616 [dag-scheduler-event-loop] org.apache.spark.storage.memory.MemoryStore  - Block broadcast_5_piece0 stored as bytes in memory (estimated size 8.8 KiB, free 1994.0 MiB)
+INFO    2020-08-02 15:58:59,617 [dispatcher-BlockManagerMaster] org.apache.spark.storage.BlockManagerInfo  - Added broadcast_5_piece0 in memory on blackhawk:52316 (size: 8.8 KiB, free: 1994.9 MiB)
+INFO    2020-08-02 15:58:59,618 [dag-scheduler-event-loop] org.apache.spark.SparkContext  - Created broadcast 5 from broadcast at DAGScheduler.scala:1200
+INFO    2020-08-02 15:58:59,618 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[11] at show at Example1.java:37) (first 15 tasks are for partitions Vector(0))
+INFO    2020-08-02 15:58:59,618 [dag-scheduler-event-loop] org.apache.spark.scheduler.TaskSchedulerImpl  - Adding task set 2.0 with 1 tasks
+INFO    2020-08-02 15:58:59,620 [dispatcher-event-loop-0] org.apache.spark.scheduler.TaskSetManager  - Starting task 0.0 in stage 2.0 (TID 2, blackhawk, executor driver, partition 0, PROCESS_LOCAL, 7755 bytes)
+INFO    2020-08-02 15:58:59,620 [Executor task launch worker for task 2] org.apache.spark.executor.Executor  - Running task 0.0 in stage 2.0 (TID 2)
+INFO    2020-08-02 15:58:59,630 [Executor task launch worker for task 2] org.apache.spark.sql.execution.datasources.FileScanRDD  - Reading File path: file:///D:/workspace/bfblog/spark-tools/samples/access.log, range: 0-4147, partition values: [empty row]
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - pattern=(?<ip>(([0-9]+)(\.[0-9]+){3}))\s(?<identd>[^\s]+)\s(?<user>[^\s]+)\s\[(?<datetime>[^\]]+)\]\s"(?<request>((?<type>GET|POST|HEAD|DELETE|OPTIONS|TRACE|PUT|OPTIONS|TRACE) (?<uri>[^\s]+) (HTTP/(?<httpversion>[^\s]+))|[^"]|(?<=\\)")+)"\s(?<httpstatus>[0-9]+)\s(?<size>[0-9]+)\s"(?<referrer>([^"]|(?<=\\)")+)"\s"(?<agent>([^"]|(?<=\\)")+)"\s"(?<xxxx>([^"]|(?<=\\)")+)"
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #1 is named ip (?<ip>
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #2
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #3
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #4
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #5 is named identd (?<identd>
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #6 is named user (?<user>
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #7 is named datetime (?<datetime>
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #8 is named request (?<request>
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #9
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #10 is named type (?<type>
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #11 is named uri (?<uri>
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #12
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #13 is named httpversion (?<httpversion>
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skip positive lookbehind (?<=
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #14 is named httpstatus (?<httpstatus>
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #15 is named size (?<size>
+INFO    2020-08-02 15:58:59,634 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #16 is named referrer (?<referrer>
+INFO    2020-08-02 15:58:59,635 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #17
+INFO    2020-08-02 15:58:59,635 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skip positive lookbehind (?<=
+INFO    2020-08-02 15:58:59,635 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #18 is named agent (?<agent>
+INFO    2020-08-02 15:58:59,635 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #19
+INFO    2020-08-02 15:58:59,635 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skip positive lookbehind (?<=
+INFO    2020-08-02 15:58:59,635 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - capturing group #20 is named xxxx (?<xxxx>
+INFO    2020-08-02 15:58:59,635 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skipping unnamed capturing group #21
+INFO    2020-08-02 15:58:59,635 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - skip positive lookbehind (?<=
+INFO    2020-08-02 15:58:59,635 [Executor task launch worker for task 2] de.bytefusion.sparktools.RegexWithNamedCaptureGroups  - fields: ip,identd,user,datetime,request,type,uri,httpversion,httpstatus,size,referrer,agent,xxxx
+INFO    2020-08-02 15:58:59,655 [Executor task launch worker for task 2] org.apache.spark.executor.Executor  - Finished task 0.0 in stage 2.0 (TID 2). 2274 bytes result sent to driver
+INFO    2020-08-02 15:58:59,656 [task-result-getter-2] org.apache.spark.scheduler.TaskSetManager  - Finished task 0.0 in stage 2.0 (TID 2) in 37 ms on blackhawk (executor driver) (1/1)
+INFO    2020-08-02 15:58:59,657 [task-result-getter-2] org.apache.spark.scheduler.TaskSchedulerImpl  - Removed TaskSet 2.0, whose tasks have all completed, from pool
+INFO    2020-08-02 15:58:59,657 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - ResultStage 2 (show at Example1.java:37) finished in 0,047 s
+INFO    2020-08-02 15:58:59,658 [dag-scheduler-event-loop] org.apache.spark.scheduler.DAGScheduler  - Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+INFO    2020-08-02 15:58:59,658 [dag-scheduler-event-loop] org.apache.spark.scheduler.TaskSchedulerImpl  - Killing all running tasks in stage 2: Stage finished
+INFO    2020-08-02 15:58:59,658 [main] org.apache.spark.scheduler.DAGScheduler  - Job 2 finished: show at Example1.java:37, took 0,051440 s
+INFO    2020-08-02 15:58:59,684 [main] org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator  - Code generated in 16.625099 ms
++---------------+------+----+--------------------+--------------------+----+--------------------+-----------+----------+----+--------------------+--------------------+----+
+|             ip|identd|user|            datetime|             request|type|                 uri|httpversion|httpstatus|size|            referrer|               agent|xxxx|
++---------------+------+----+--------------------+--------------------+----+--------------------+-----------+----------+----+--------------------+--------------------+----+
+|109.169.248.247|     -|   -|12/Dec/2015:18:25...|GET /administrato...| GET|     /administrator/|        1.1|       200|4263|                   -|Mozilla/5.0 (Wind...|   -|
+|109.169.248.247|     -|   -|12/Dec/2015:18:25...|POST /administrat...|POST|/administrator/in...|        1.1|       200|4494|http://almhuette-...|Mozilla/5.0 (Wind...|   -|
+|    46.72.177.4|     -|   -|12/Dec/2015:18:31...|GET /administrato...| GET|     /administrator/|        1.1|       200|4263|                   -|Mozilla/5.0 (Wind...|   -|
+|    46.72.177.4|     -|   -|12/Dec/2015:18:31...|POST /administrat...|POST|/administrator/in...|        1.1|       200|4494|http://almhuette-...|Mozilla/5.0 (Wind...|   -|
+| 83.167.113.100|     -|   -|12/Dec/2015:18:31...|GET /administrato...| GET|     /administrator/|        1.1|       200|4263|                   -|Mozilla/5.0 (Wind...|   -|
+| 83.167.113.100|     -|   -|12/Dec/2015:18:31...|POST /administrat...|POST|/administrator/in...|        1.1|       200|4494|http://almhuette-...|Mozilla/5.0 (Wind...|   -|
+|   95.29.198.15|     -|   -|12/Dec/2015:18:32...|GET /administrato...| GET|     /administrator/|        1.1|       200|4263|                   -|Mozilla/5.0 (Wind...|   -|
+|   95.29.198.15|     -|   -|12/Dec/2015:18:32...|POST /administrat...|POST|/administrator/in...|        1.1|       200|4494|http://almhuette-...|Mozilla/5.0 (Wind...|   -|
+|  109.184.11.34|     -|   -|12/Dec/2015:18:32...|GET /administrato...| GET|     /administrator/|        1.1|       200|4263|                   -|Mozilla/5.0 (Wind...|   -|
+|  109.184.11.34|     -|   -|12/Dec/2015:18:32...|POST /administrat...|POST|/administrator/in...|        1.1|       200|4494|http://almhuette-...|Mozilla/5.0 (Wind...|   -|
+|   91.227.29.79|     -|   -|12/Dec/2015:18:33...|GET /administrato...| GET|     /administrator/|        1.1|       200|4263|                   -|Mozilla/5.0 (Wind...|   -|
+|   91.227.29.79|     -|   -|12/Dec/2015:18:33...|POST /administrat...|POST|/administrator/in...|        1.1|       200|4494|http://almhuette-...|Mozilla/5.0 (Wind...|   -|
+|  90.154.66.233|     -|   -|12/Dec/2015:18:36...|GET /administrato...| GET|     /administrator/|        1.1|       200|4263|                   -|Mozilla/5.0 (Wind...|   -|
+|  90.154.66.233|     -|   -|12/Dec/2015:18:36...|POST /administrat...|POST|/administrator/in...|        1.1|       200|4494|http://almhuette-...|Mozilla/5.0 (Wind...|   -|
+|  95.140.24.131|     -|   -|12/Dec/2015:18:38...|GET /administrato...| GET|     /administrator/|        1.1|       200|4263|                   -|Mozilla/5.0 (Wind...|   -|
+|  95.140.24.131|     -|   -|12/Dec/2015:18:38...|POST /administrat...|POST|/administrator/in...|        1.1|       200|4494|http://almhuette-...|Mozilla/5.0 (Wind...|   -|
+|  95.188.245.16|     -|   -|12/Dec/2015:18:38...|GET /administrato...| GET|     /administrator/|        1.1|       200|4263|                   -|Mozilla/5.0 (Wind...|   -|
+|  95.188.245.16|     -|   -|12/Dec/2015:18:38...|POST /administrat...|POST|/administrator/in...|        1.1|       200|4494|http://almhuette-...|Mozilla/5.0 (Wind...|   -|
+|  46.72.213.133|     -|   -|12/Dec/2015:18:39...|GET /administrato...| GET|     /administrator/|        1.1|       200|4263|                   -|Mozilla/5.0 (Wind...|   -|
+|  46.72.213.133|     -|   -|12/Dec/2015:18:39...|POST /administrat...|POST|/administrator/in...|        1.1|       200|4494|http://almhuette-...|Mozilla/5.0 (Wind...|   -|
++---------------+------+----+--------------------+--------------------+----+--------------------+-----------+----------+----+--------------------+--------------------+----+
+only showing top 20 rows
+
+INFO    2020-08-02 15:58:59,695 [Thread-1] org.apache.spark.SparkContext  - Invoking stop() from shutdown hook
+INFO    2020-08-02 15:58:59,800 [Thread-1] org.sparkproject.jetty.server.AbstractConnector  - Stopped Spark@5af28b27{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+INFO    2020-08-02 15:58:59,801 [Thread-1] org.apache.spark.ui.SparkUI  - Stopped Spark web UI at http://blackhawk:4040
+INFO    2020-08-02 15:58:59,818 [dispatcher-BlockManagerMaster] org.apache.spark.storage.BlockManagerInfo  - Removed broadcast_3_piece0 on blackhawk:52316 in memory (size: 7.5 KiB, free: 1994.9 MiB)
+INFO    2020-08-02 15:58:59,833 [dispatcher-event-loop-1] org.apache.spark.MapOutputTrackerMasterEndpoint  - MapOutputTrackerMasterEndpoint stopped!
+INFO    2020-08-02 15:58:59,859 [Thread-1] org.apache.spark.storage.memory.MemoryStore  - MemoryStore cleared
+INFO    2020-08-02 15:58:59,859 [Thread-1] org.apache.spark.storage.BlockManager  - BlockManager stopped
+INFO    2020-08-02 15:58:59,863 [Thread-1] org.apache.spark.storage.BlockManagerMaster  - BlockManagerMaster stopped
+INFO    2020-08-02 15:58:59,866 [dispatcher-event-loop-1] org.apache.spark.scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint  - OutputCommitCoordinator stopped!
+INFO    2020-08-02 15:58:59,870 [Thread-1] org.apache.spark.SparkContext  - Successfully stopped SparkContext
+INFO    2020-08-02 15:58:59,870 [Thread-1] org.apache.spark.util.ShutdownHookManager  - Shutdown hook called
+INFO    2020-08-02 15:58:59,871 [Thread-1] org.apache.spark.util.ShutdownHookManager  - Deleting directory C:\Users\markus\AppData\Local\Temp\spark-fcbfc196-3b75-46e4-940c-507c497124ca
+
+Process finished with exit code 0
