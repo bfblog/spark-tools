@@ -58,9 +58,9 @@ HEALTHCHECK --interval=5s --timeout=3s CMD if [ -f /src/public/index.html ] ; th
 
 # hadolint ignore=DL4005
 RUN sed -i 's/http:/https:/g' /etc/apt/sources.list \
-    && apt-get update  \
+    && apt-get update -y  \
     && ln -s /lib /lib64 \
-    && apt-get install --no-install-recommends -y procps=2:3.3.15-2 bash=5.0-4 tini=0.18.0-1 libc6=2.28-10 libpam-modules=1.3.1-5 krb5-user=1.17-3 libnss3=2:3.42.1-1+deb10u2 \
+    && apt-get install --no-install-recommends -y procps=2:3.3.15-2 bash=5.0-4 tini=0.18.0-1 libc6=2.28-10 libpam-modules=1.3.1-5 krb5-user=1.17-3 libnss3=2:3.42.1-1+deb10u3 \
     && rm /bin/sh \
     && ln -sv /bin/bash /bin/sh \
     && echo "auth required pam_wheel.so use_uid" >> /etc/pam.d/su \
