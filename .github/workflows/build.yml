@@ -47,4 +47,4 @@ jobs:
       run: docker build -t bfblog/spark:latest -t bfblog/spark:${GITHUB_SHA::8} .
     
     - name: Publish Docker image
-      run: docker push $REPO 
+      run: docker push bfblog/spark:latest 
