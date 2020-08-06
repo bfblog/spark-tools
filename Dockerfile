@@ -83,7 +83,9 @@ COPY --from=builder /spark_home/data ./data
 ENV SPARK_HOME=/home/spark
 
 COPY --from=builder /spark_home .
+COPY target/spark-tools*.jar ./jars/
+COPY ./spark-tools.scala .
 
 ENTRYPOINT ["/usr/bin/tini", "--"] 
 
-CMD ["/bin/bash", "-c", "/home/spark/bin/spark-shell" ]
+CMD ["/bin/bash", "-c", "/home/spark/bin/spark-shell -I spark-tools.scala" ]
