@@ -30,7 +30,7 @@ public class RegexWithNamedCaptureGroups {
         log.info("pattern=" + pattern );
         // regex match all capturing groups
         Pattern p1 = Pattern.compile("\\((\\?(=|<=|!|<!|<((?![=!])[^>]+)>))?");
-        // find all captering groups
+        // find all capturing groups
         Matcher m = p1.matcher(pattern);
         int count=0;
         ArrayList<String> allFields = new ArrayList<>();
