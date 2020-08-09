@@ -2,8 +2,6 @@ package de.bytefusion.sparktools;
 
 import de.bytefusion.sparktools.udf.SplitByRegex;
 import org.apache.spark.sql.Column;
-import org.apache.spark.sql.Row;
-import org.apache.spark.sql.api.java.UDF1;
 import org.apache.spark.sql.expressions.UserDefinedFunction;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.StructField;
@@ -65,6 +63,5 @@ public class BFTools {
         StructType struct = DataTypes.createStructType(sf);
         return udf( new SplitByRegex( p ), struct);
     }
-
 
 }
