@@ -36,7 +36,7 @@ public class Example2 {
         df.show(10,1000);
 
         // apply regular expression with named capture groups
-        Dataset<Row> df2 = df.withColumn("x", BFTools.regex(df.col("value"),"(?<loglevel>[A-Z]+)\\s+(?<datetime>[^\\s]+\\s[^\\s]+)\\s+\\[(?<thread>[^\\]]+)\\]\\s(?<class>[^\\s]+)\\s+(?<message>.*)"));
+        Dataset<Row> df2 = df.withColumn("x", BFTools.regex_match(df.col("value"),"(?<loglevel>[A-Z]+)\\s+(?<datetime>[^\\s]+\\s[^\\s]+)\\s+\\[(?<thread>[^\\]]+)\\]\\s(?<class>[^\\s]+)\\s+(?<message>.*)"));
 
         // show contents with additional columns from regex
         df2.show();
