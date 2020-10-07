@@ -7,10 +7,7 @@ import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.functions;
 
-/**
- * Example splitting web server access log into data frame with the columns ip, identity, user, type, uri, type, ...
- */
-public class Example1 {
+public class Example3 {
     public static void main(String[] args) {
 
         SparkConf sparkConf =
@@ -30,7 +27,7 @@ public class Example1 {
         df = df.withColumn("filename", functions.input_file_name());
         df.show(10,1000);
 
-        Dataset<Row> df2 = df.withColumn("details", BFTools.regex_match(df.col("value"),"(?<ip>(([0-9]+)(\\.[0-9]+){3}))\\s(?<identd>[^\\s]+)\\s(?<user>[^\\s]+)\\s\\[(?<datetime>[^\\]]+)\\]\\s\"(?<request>((?<type>GET|POST|HEAD|DELETE|OPTIONS|TRACE|PUT|OPTIONS|TRACE) (?<uri>[^\\s]+) (HTTP/(?<httpversion>[^\\s]+))|[^\"]|(?<=\\\\)\")+)\"\\s(?<httpstatus>[0-9]+)\\s(?<size>[0-9]+)\\s\"(?<referrer>([^\"]|(?<=\\\\)\")+)\"\\s\"(?<agent>([^\"]|(?<=\\\\)\")+)\"\\s\"(?<xxxx>([^\"]|(?<=\\\\)\")+)\""));
+        Dataset<Row> df2 = df.withColumn("details", BFTools.regex_find(df.col("value"),"(?<ip>[0-9]+(\\.[0-9]+){3})|(?<method>GET|POST|HEAD)|(?<index>index\\.php)"));
 
         df2.show();
         df2.printSchema();

@@ -1,11 +1,6 @@
 package de.bytefusion.sparktools;
 
 import org.apache.log4j.Logger;
-import org.apache.spark.SparkConf;
-import org.apache.spark.SparkContext;
-import org.apache.spark.sql.Dataset;
-import org.apache.spark.sql.Row;
-import org.apache.spark.sql.SparkSession;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -57,6 +52,7 @@ public class TestRegex {
 
     @Test
     public void test3() {
-
+        String regex = "((?<scheme>[a-z][a-z0-9+.\\-]*):/{0,2})?(((?<ip>((?<ipv4>[0-9]{1,3}(.[0-9]{1,3}){3})|(?<ipv6>[0-9A-Fa-f]{4}(:[0-9A-Fa-f]{4}){7})))|(?<host>[a-zA-Z0-9$§\\-]+(\\.[a-zA-Z0-9$§\\-]+)*))(:(?<port>[0-9]{1,6}))?)?(?<path>/[^\\?]+)?(\\?(?<query>([a-z0-9-._~!$&'\\(\\)*+,;=:@\\/?]|%[0-9A-F]{2})*))?(#(?<fragment>[^\\s]+))?";
+        RegexWithNamedCaptureGroups.prettyPrint(regex);
     }
 }

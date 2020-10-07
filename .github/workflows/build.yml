@@ -5,6 +5,7 @@ name: CI
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
+  workflow_dispatch:
   push:
     branches: [ work, master ]
   pull_request:
@@ -38,3 +39,12 @@ jobs:
           java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      
+    - name: Login to Docker Hub
+      run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
+    
+    - name: Build Docker image
+      run: docker build -t bfblog/spark:latest -t bfblog/spark:${GITHUB_SHA::8} .
+    
+    - name: Publish Docker image
+      run: docker push bfblog/spark:latest 
