@@ -90,6 +90,31 @@ public class RegexWithNamedCaptureGroups {
         return this.match;
     }
 
+    public boolean find( String text ) {
+        boolean anyMatch = false;
+
+        // clear buffer
+        for( int idx=0; idx<this.values.length; idx++ ) {
+            values[idx] = null;
+        }
+
+        Matcher m = this.p.matcher(text);
+        while ( m.find() ) {
+            anyMatch = true;
+
+            // text matches regular expression
+            for( int idx=0; idx<this.fields.length; idx++) {
+                String fieldName = fields[idx];
+                int group = this.groups.get(fieldName).intValue();
+                String value = m.group(group);
+                if ( value != null ) {
+                    values[idx] = value;
+                }
+            }
+        }
+        return anyMatch;
+    }
+
     public Map<String,String> asKeyValuePair() {
         Map<String,String> result = null;
         if ( this.match ) {
