@@ -5,7 +5,11 @@ else
 ROOT_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 endif
 
+USER_ID := $(shell id -u)
+GROUP_ID := $(shell id -g)
+
 build:
+	docker run --rm -ti -v "$(ROOT_DIR)":/usr/src/mymaven -w /usr/src/mymaven -u $(USER_ID):$(GROUP_ID) maven:3.6.3-adoptopenjdk-8 mvn clean install
 	docker build . --tag bfblog/spark
 
 run:
