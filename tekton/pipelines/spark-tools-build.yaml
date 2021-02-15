@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: pipeline-with-parameters
+spec:
+  tasks:
+    - name: build-skaffold-web
+      taskRef:
+        name: git-clone
+      params:
+        - name: url
+          value: https://github.com/bfblog/spark-tools

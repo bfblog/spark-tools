@@ -1,0 +1,36 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: hello-world-task
+spec: 
+  resources:
+    inputs:
+      - name: git-source
+        type: git
+  steps:
+    - name: echo-hello-world
+      image: busybox:latest
+      command: 
+       - echo
+      args:
+        - "hello world!"
+    - name: pwd
+      image: busybox
+      command:
+       - pwd
+    - name: list 
+      image: busybox
+      command:
+       - ls
+    - name: list-long 
+      image: busybox
+      command:
+       - ls
+      args: 
+        - "-l"
+        - "git-source"
+  workspaces:
+    - name: workspace
+      description: The folder where we write the message to
+      mountPath: /workspace
+      optional: true
