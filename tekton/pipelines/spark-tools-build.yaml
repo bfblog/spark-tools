@@ -1,12 +1,18 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: pipeline-with-parameters
+  name: build-spark-tools
 spec:
+  workspaces:
+    - name: spark-tools
   tasks:
-    - name: build-skaffold-web
+    - name: spark-tools-git
       taskRef:
         name: git-clone
       params:
         - name: url
           value: https://github.com/bfblog/spark-tools
+      workspaces:
+        - name: output
+          workspace: spark-tools
+          
