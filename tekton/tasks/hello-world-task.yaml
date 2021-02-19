@@ -30,7 +30,7 @@ spec:
         - "-l"
         - "git-source"
   workspaces:
-    - name: workspace
+    - name: spark-tools
       description: The folder where we write the message to
       mountPath: /workspace
       optional: true
