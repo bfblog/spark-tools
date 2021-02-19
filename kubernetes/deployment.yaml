@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spark-tools
+  labels:
+    app: spark-tools
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spark-tools
+  template:
+    metadata:
+      labels:
+        app: spark-tools
+    spec:
+      containers:
+      - name: spark-tools
+        image: bfblog/spark:latest
