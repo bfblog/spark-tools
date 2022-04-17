@@ -1,13 +1,13 @@
-FROM alpine:3.12.0 AS builder
+FROM alpine:3.15.0 AS builder
 
 WORKDIR /tmp
 
-ARG SPARK_VERSION=3.0.1
+ARG SPARK_VERSION=3.2.1
 ARG HADOOP_VERSION=2.7
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
-RUN apk add --no-cache gnupg=2.2.23-r0 \
+RUN apk add --no-cache gnupg=2.2.31-r1 \
     && wget https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
     && wget https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz.asc \
     && wget https://dist.apache.org/repos/dist/dev/spark/KEYS 
@@ -18,6 +18,7 @@ COPY ./gnupg /root/.gnupg
 RUN chmod 700 /root/.gnupg 
 RUN chmod 600 /root/.gnupg/*
 RUN gpg --list-sigs
+RUN gpg --import KEYS
 RUN gpg --verify spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz.asc spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz
 RUN mkdir spark_runtime
 
@@ -60,7 +61,7 @@ HEALTHCHECK --interval=5s --timeout=3s CMD if [ -f /src/public/index.html ] ; th
 RUN sed -i 's/http:/https:/g' /etc/apt/sources.list \
     && apt-get update -y  \
     && ln -s /lib /lib64 \
-    && apt-get install --no-install-recommends -y procps=2:3.3.15-2 bash=5.0-4 tini=0.18.0-1 libc6=2.28-10 libpam-modules=1.3.1-5 krb5-user=1.17-3 libnss3=2:3.42.1-1+deb10u3 \
+    && apt-get install --no-install-recommends -y procps=2:3.3.17-5 bash=5.1-2+b3 tini=0.19.0-1 libc6=2.31-13+deb11u2 libpam-modules=1.4.0-9+deb11u1 krb5-user=1.18.3-6+deb11u1 libnss3=2:3.61-1+deb11u2 \
     && rm /bin/sh \
     && ln -sv /bin/bash /bin/sh \
     && echo "auth required pam_wheel.so use_uid" >> /etc/pam.d/su \
