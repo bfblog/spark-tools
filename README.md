@@ -34,3 +34,8 @@ Did you note the nested capturing groups? The request and its components type, U
         .withColumn("details", SparkTools.regex(df.col("value"),"(?<ip>(([0-9]+)(\\.[0-9]+){3}))\\s(?<identd>[^\\s]+)\\s(?<user>[^\\s]+)\\s\\[(?<datetime>[^\\]]+)\\]\\s\"(?<request>((?<type>GET|POST|HEAD|DELETE|OPTIONS|TRACE|PUT|OPTIONS|TRACE) (?<uri>[^\\s]+) (HTTP/(?<httpversion>[^\\s]+))|[^\"]|(?<=\\\\)\")+)\"\\s(?<httpstatus>[0-9]+)\\s(?<size>[0-9]+)\\s\"(?<referrer>([^\"]|(?<=\\\\)\")+)\"\\s\"(?<agent>([^\"]|(?<=\\\\)\")+)\"\\s\"(?<xxxx>([^\"]|(?<=\\\\)\")+)\""));
         show();
 
+# References
+* https://www.bytefusion.de/2020/08/05/make-it-easy-apache-spark-data-frames-and-regex-power/
+* https://www.bytefusion.de/2017/06/10/analyze-access-log-with-apache-spark/
+  
+
