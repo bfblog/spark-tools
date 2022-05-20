@@ -7,10 +7,11 @@ ARG HADOOP_VERSION=2.7
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
-RUN apk add --no-cache gnupg=2.2.31-r1 \
+RUN apk add --no-cache gnupg=2.2.31-r1 maven\
     && wget https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
     && wget https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz.asc \
     && wget https://dist.apache.org/repos/dist/dev/spark/KEYS 
+    
 
 # copy prepared files
 COPY ./gnupg /root/.gnupg
@@ -24,6 +25,8 @@ RUN mkdir spark_runtime
 
 WORKDIR /spark_home
 RUN tar xzvf /tmp/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz --strip-components=1 
+RUN mvn dependency:copy -Dartifact=io.delta:delta-core_2.12:1.2.1 -DoutputDirectory=/spark_home/jars
+RUN mvn dependency:copy -Dartifact=io.delta:delta-storage:1.2.1 -DoutputDirectory=/spark_home/jars
 
 FROM openjdk:8-jre-slim 
 
@@ -89,4 +92,4 @@ COPY ./spark-tools.scala .
 
 ENTRYPOINT ["/usr/bin/tini", "--"] 
 
-CMD ["/bin/bash", "-c", "/home/spark/bin/spark-shell -I spark-tools.scala" ]
+CMD ["/bin/bash", "-c", "/home/spark/bin/spark-shell -I spark-tools.scala --conf 'spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension' --conf 'spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog'" ]
