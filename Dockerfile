@@ -8,7 +8,7 @@ ARG DELTA_VERSION=1.2.1
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
-RUN apk add --no-cache gnupg=2.2.31-r1 maven\
+RUN apk add --no-cache gnupg=2.2.35-r3 maven\
     && wget https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
     && wget https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz.asc \
     && wget https://dist.apache.org/repos/dist/dev/spark/KEYS 
