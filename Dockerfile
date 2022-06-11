@@ -4,6 +4,7 @@ WORKDIR /tmp
 
 ARG SPARK_VERSION=3.2.1
 ARG HADOOP_VERSION=2.7
+ARG DELTA_VERSION=1.2.1
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
@@ -25,8 +26,8 @@ RUN mkdir spark_runtime
 
 WORKDIR /spark_home
 RUN tar xzvf /tmp/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz --strip-components=1 
-RUN mvn dependency:copy -Dartifact=io.delta:delta-core_2.12:1.2.1 -DoutputDirectory=/spark_home/jars
-RUN mvn dependency:copy -Dartifact=io.delta:delta-storage:1.2.1 -DoutputDirectory=/spark_home/jars
+RUN mvn dependency:copy -Dartifact=io.delta:delta-core_2.12:${DELTA_VERSION} -DoutputDirectory=/spark_home/jars
+RUN mvn dependency:copy -Dartifact=io.delta:delta-storage:${DELTA_VERSION} -DoutputDirectory=/spark_home/jars
 
 FROM openjdk:8-jre-slim 
 

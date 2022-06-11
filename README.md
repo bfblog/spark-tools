@@ -37,5 +37,6 @@ Did you note the nested capturing groups? The request and its components type, U
 # References
 * https://www.bytefusion.de/2020/08/05/make-it-easy-apache-spark-data-frames-and-regex-power/
 * https://www.bytefusion.de/2017/06/10/analyze-access-log-with-apache-spark/
+* https://www.bytefusion.de/2022/06/11/apache-spark-delta-lake-examples/
   
 
