@@ -40,4 +40,4 @@ jobs:
       run: docker build -t bfblog/maven-jdk8:latest  ./docker
     
     - name: Publish Docker image
-      run: docker push bfblog/maven-jdk8:latest:latest 
+      run: docker push bfblog/maven-jdk8:latest
