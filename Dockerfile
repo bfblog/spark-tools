@@ -1,16 +1,19 @@
-FROM alpine:3.15.0 AS builder
+FROM alpine:3.16.0 AS builder
 
 WORKDIR /tmp
 
 ARG SPARK_VERSION=3.2.1
 ARG HADOOP_VERSION=2.7
+ARG DELTA_VERSION=1.2.1
+ARG ES_HADOOP_VERSION=8.2.2
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
-RUN apk add --no-cache gnupg=2.2.31-r1 \
+RUN apk add --no-cache gnupg=2.2.35-r3 maven\
     && wget https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
     && wget https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz.asc \
-    && wget https://dist.apache.org/repos/dist/dev/spark/KEYS 
+    && wget https://dist.apache.org/repos/dist/dev/spark/KEYS    
+
 
 # copy prepared files
 COPY ./gnupg /root/.gnupg
@@ -24,6 +27,10 @@ RUN mkdir spark_runtime
 
 WORKDIR /spark_home
 RUN tar xzvf /tmp/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz --strip-components=1 
+RUN mvn dependency:copy -Dartifact=io.delta:delta-core_2.12:${DELTA_VERSION} -DoutputDirectory=/spark_home/jars
+RUN mvn dependency:copy -Dartifact=io.delta:delta-storage:${DELTA_VERSION} -DoutputDirectory=/spark_home/jars
+RUN mvn dependency:copy -Dartifact=org.elasticsearch:elasticsearch-hadoop:${ES_HADOOP_VERSION} -DoutputDirectory=/spark_home/jars
+RUN cd /spark_home/jars && wget https://artifacts.opensearch.org/opensearch-clients/jdbc/opensearch-sql-jdbc-1.1.0.1.jar
 
 FROM openjdk:8-jre-slim 
 
@@ -59,9 +66,9 @@ HEALTHCHECK --interval=5s --timeout=3s CMD if [ -f /src/public/index.html ] ; th
 
 # hadolint ignore=DL4005
 RUN sed -i 's/http:/https:/g' /etc/apt/sources.list \
-    && apt-get update -y  \
+    && apt-get update -y && apt-get upgrade -y  \
     && ln -s /lib /lib64 \
-    && apt-get install --no-install-recommends -y procps=2:3.3.17-5 bash=5.1-2+b3 tini=0.19.0-1 libc6=2.31-13+deb11u2 libpam-modules=1.4.0-9+deb11u1 krb5-user=1.18.3-6+deb11u1 libnss3=2:3.61-1+deb11u2 \
+    && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y procps=2:3.3.17-5 bash=5.1-2+b3 tini=0.19.0-1 libc6=2.31-13+deb11u3 libpam-modules=1.4.0-9+deb11u1 krb5-user=1.18.3-6+deb11u1 libnss3=2:3.61-1+deb11u2 \
     && rm /bin/sh \
     && ln -sv /bin/bash /bin/sh \
     && echo "auth required pam_wheel.so use_uid" >> /etc/pam.d/su \
@@ -89,4 +96,4 @@ COPY ./spark-tools.scala .
 
 ENTRYPOINT ["/usr/bin/tini", "--"] 
 
-CMD ["/bin/bash", "-c", "/home/spark/bin/spark-shell -I spark-tools.scala" ]
+CMD ["/bin/bash", "-c", "/home/spark/bin/spark-shell -I spark-tools.scala --conf 'spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension' --conf 'spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog'" ]

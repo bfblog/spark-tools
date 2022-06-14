@@ -1,4 +1,4 @@
 import de.bytefusion.sparktools._
 
 println( "*********************")
-println( "use SparkTools.<...> ")
+println( "use BFTools.<...> ")

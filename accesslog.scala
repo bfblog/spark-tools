@@ -6,6 +6,7 @@ df = df.withColumn("details", BFTools.regex_match(df.col("value"),"(?<ip>(([0-9]
 df = df.select("details.*")
 df = df.withColumn("httpstatus", $"httpstatus".cast(org.apache.spark.sql.types.IntegerType))
 df = df.withColumn("size", $"size".cast(org.apache.spark.sql.types.IntegerType))
+df = df.withColumn("datetime", to_date($"datetime", "dd/MMM/yyyy:HH:mm:SS Z"))
 
 df.printSchema
 

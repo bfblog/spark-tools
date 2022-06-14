@@ -1,0 +1,1 @@
+docker run -ti --network=host --rm --name=kubectl-host --volume %~dp0:/workspace --volume %USERPROFILE%\.kube:/home/developer/.kube --volume //var/run/docker.sock:/var/run/docker.sock bfblog/maven-jdk8:latest 
