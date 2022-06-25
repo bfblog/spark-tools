@@ -5,6 +5,7 @@ WORKDIR /tmp
 ARG SPARK_VERSION=3.2.1
 ARG HADOOP_VERSION=2.7
 ARG DELTA_VERSION=1.2.1
+ARG ICEBERG_VERSION=0.13.2
 ARG ES_HADOOP_VERSION=8.2.2
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
@@ -13,7 +14,6 @@ RUN apk add --no-cache gnupg=2.2.35-r3 maven\
     && wget https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
     && wget https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz.asc \
     && wget https://dist.apache.org/repos/dist/dev/spark/KEYS    
-
 
 # copy prepared files
 COPY ./gnupg /root/.gnupg
@@ -30,6 +30,7 @@ RUN tar xzvf /tmp/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz --strip
 RUN mvn dependency:copy -Dartifact=io.delta:delta-core_2.12:${DELTA_VERSION} -DoutputDirectory=/spark_home/jars
 RUN mvn dependency:copy -Dartifact=io.delta:delta-storage:${DELTA_VERSION} -DoutputDirectory=/spark_home/jars
 RUN mvn dependency:copy -Dartifact=org.elasticsearch:elasticsearch-hadoop:${ES_HADOOP_VERSION} -DoutputDirectory=/spark_home/jars
+RUN mvn dependency:copy -Dartifact=org.apache.iceberg:iceberg-core:${ICEBERG_VERSION} -DoutputDirectory=/spark_home/jars
 RUN cd /spark_home/jars && wget https://artifacts.opensearch.org/opensearch-clients/jdbc/opensearch-sql-jdbc-1.1.0.1.jar
 
 FROM openjdk:8-jre-slim 
