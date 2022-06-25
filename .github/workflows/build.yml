@@ -7,9 +7,14 @@ name: CI
 on:
   workflow_dispatch:
   push:
-    branches: [ work, master ]
+    branches: 
+      - 'work'
+      - 'master'
+    tags:
+      - 'v*'
   pull_request:
-    branches: [ master ]
+    branches: 
+      - 'master'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -21,8 +26,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-
+    - name: Checkout
+      uses: actions/checkout@v3
+    
+    - name: Docker meta
+      id: meta
+      uses: docker/metadata-action@v4
+      with:
+        images: bfblog/spark
+          
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: echo Hello, world!
@@ -41,10 +53,16 @@ jobs:
       run: mvn -B package --file pom.xml
       
     - name: Login to Docker Hub
-      run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
+      if: github.event_name != 'pull_request'
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_USER }}
+        password: ${{ secrets.DOCKER_PASS }}
     
-    - name: Build Docker image
-      run: docker build -t bfblog/spark:latest -t bfblog/spark:${GITHUB_SHA::8} .
-    
-    - name: Publish Docker image
-      run: docker push bfblog/spark:latest 
+    - name: Build and Push
+      uses: docker/build-push-action@v3
+      with:
+        context: .
+        push: ${{ github.event_name != 'pull_request' }}
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
