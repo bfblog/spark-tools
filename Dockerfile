@@ -10,7 +10,7 @@ ARG ES_HADOOP_VERSION=8.2.2
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
-RUN apk add --no-cache gnupg=2.2.35-r3 maven\
+RUN apk add --no-cache gnupg=2.2.35-r4 maven\
     && wget https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
     && wget https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz.asc \
     && wget https://dist.apache.org/repos/dist/dev/spark/KEYS    
