@@ -1,4 +1,4 @@
-FROM alpine:3.16.0 AS builder
+FROM alpine:3.16.2 AS builder
 
 WORKDIR /tmp
 
@@ -69,7 +69,7 @@ HEALTHCHECK --interval=5s --timeout=3s CMD if [ -f /src/public/index.html ] ; th
 RUN sed -i 's/http:/https:/g' /etc/apt/sources.list \
     && apt-get update -y && apt-get upgrade -y  \
     && ln -s /lib /lib64 \
-    && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y procps=2:3.3.17-5 bash=5.1.16-r2 tini=0.19.0-1 libc6=2.31-13+deb11u3 libpam-modules=1.4.0-9+deb11u1 krb5-user=1.18.3-6+deb11u1 libnss3=2:3.61-1+deb11u2 \
+    && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y procps=2:3.3.17-5 bash=5.1-2+deb11u1 tini=0.19.0-1 libc6=2.31-13+deb11u3 libpam-modules=1.4.0-9+deb11u1 krb5-user=1.18.3-6+deb11u1 libnss3=2:3.61-1+deb11u2 \
     && rm /bin/sh \
     && ln -sv /bin/bash /bin/sh \
     && echo "auth required pam_wheel.so use_uid" >> /etc/pam.d/su \
