@@ -2,10 +2,10 @@ FROM alpine:3.16.2 AS builder
 
 WORKDIR /tmp
 
-ARG SPARK_VERSION=3.2.2
-ARG HADOOP_VERSION=2.7
-ARG DELTA_VERSION=1.2.1
-ARG ICEBERG_VERSION=0.13.2
+ARG SPARK_VERSION=3.3.0
+ARG HADOOP_VERSION=3
+ARG DELTA_VERSION=2.1.0
+ARG ICEBERG_VERSION=0.14.1
 ARG ES_HADOOP_VERSION=8.2.2
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
@@ -66,10 +66,10 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 HEALTHCHECK --interval=5s --timeout=3s CMD if [ -f /src/public/index.html ] ; then exit 0; else exit 1; fi
 
 # hadolint ignore=DL4005
-RUN sed -i 's/http:/https:/g' /etc/apt/sources.list \
+RUN set -x && sed -i 's/http:/https:/g' /etc/apt/sources.list \
     && apt-get update -y && apt-get upgrade -y  \
     && ln -s /lib /lib64 \
-    && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y procps=2:3.3.17-5 bash=5.1-2+deb11u1 tini=0.19.0-1 libc6=2.31-13+deb11u3 libpam-modules=1.4.0-9+deb11u1 krb5-user=1.18.3-6+deb11u1 libnss3=2:3.61-1+deb11u2 \
+    && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y procps=2:3.3.17-5 bash=5.1-2+deb11u1 tini=0.19.0-1 libc6=2.31-13+deb11u4 libpam-modules=1.4.0-9+deb11u1 krb5-user=1.18.3-6+deb11u2 libnss3=2:3.61-1+deb11u2 \
     && rm /bin/sh \
     && ln -sv /bin/bash /bin/sh \
     && echo "auth required pam_wheel.so use_uid" >> /etc/pam.d/su \
