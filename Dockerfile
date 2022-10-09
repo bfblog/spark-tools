@@ -7,6 +7,8 @@ ARG HADOOP_VERSION=3
 ARG DELTA_VERSION=2.1.0
 ARG ICEBERG_VERSION=0.14.1
 ARG ES_HADOOP_VERSION=8.2.2
+ARG CASSANDRA_VERSION=3.2.0
+ARG SPARK_SQL_KAFKA_VERSION=3.3.0
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
@@ -31,6 +33,8 @@ RUN mvn dependency:copy -Dartifact=io.delta:delta-core_2.12:${DELTA_VERSION} -Do
 RUN mvn dependency:copy -Dartifact=io.delta:delta-storage:${DELTA_VERSION} -DoutputDirectory=/spark_home/jars
 RUN mvn dependency:copy -Dartifact=org.elasticsearch:elasticsearch-hadoop:${ES_HADOOP_VERSION} -DoutputDirectory=/spark_home/jars
 RUN mvn dependency:copy -Dartifact=org.apache.iceberg:iceberg-core:${ICEBERG_VERSION} -DoutputDirectory=/spark_home/jars
+RUN mvn dependency:copy -Dartifact=com.datastax.spark:spark-cassandra-connector_2.12:${CASSANDRA_VERSION} -DoutputDirectory=/spark_home/jars
+RUN mvn dependency:copy -Dartifact=org.apache.spark:spark-sql-kafka-0-10_2.12:${SPARK_SQL_KAFKA_VERSION} -DoutputDirectory=/spark_home/jars
 RUN cd /spark_home/jars && wget https://artifacts.opensearch.org/opensearch-clients/jdbc/opensearch-sql-jdbc-1.1.0.1.jar
 
 FROM openjdk:8-jre-slim 
