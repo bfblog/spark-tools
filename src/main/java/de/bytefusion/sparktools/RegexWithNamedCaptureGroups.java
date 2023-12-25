@@ -115,14 +115,14 @@ public class RegexWithNamedCaptureGroups {
         return anyMatch;
     }
 
-    public Map<String,String> asKeyValuePair() {
-        Map<String,String> result = null;
-        if ( this.match ) {
-            result = new HashMap<String,String>();
-            int index=0;
-            for( String field : this.fields ) {
+    public Map<String, String> asKeyValuePair() {
+        Map<String, String> result = null;
+        if (this.match) {
+            result = new HashMap<>();
+            int index = 0;
+            for (String field : this.fields) {
                 String value = this.values[index];
-                result.put(field,value);
+                result.put(field, value);
                 index++;
             }
         }
