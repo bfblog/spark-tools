@@ -19,6 +19,7 @@ public class RegexWithNamedCaptureGroups {
     private final Pattern p;
     private boolean match;
 
+    
     public RegexWithNamedCaptureGroups(Pattern p) {
         this.p = p;
         // extract string value
@@ -61,16 +62,19 @@ public class RegexWithNamedCaptureGroups {
 
         }
 
+        // remember field indices
         for( int index=0; index<allFields.size(); index++ ) {
             this.fieldIndices.put( allFields.get(index), Integer.valueOf(index));
         }
 
+        // remember fields
         this.fields = new String[allFields.size()];
         this.fields = allFields.toArray(this.fields);
         this.values = new String[allFields.size()];
+
         log.info( "fields: " + Arrays.stream( this.fields ).collect(Collectors.joining(",")) );
     }
-
+    
     public boolean match( String text ) {
         // clear buffer
         for( int idx=0; idx<this.values.length; idx++ ) {
@@ -115,14 +119,14 @@ public class RegexWithNamedCaptureGroups {
         return anyMatch;
     }
 
-    public Map<String,String> asKeyValuePair() {
-        Map<String,String> result = null;
-        if ( this.match ) {
-            result = new HashMap<String,String>();
-            int index=0;
-            for( String field : this.fields ) {
+    public Map<String, String> asKeyValuePair() {
+        Map<String, String> result = null;
+        if (this.match) {
+            result = new HashMap<>();
+            int index = 0;
+            for (String field : this.fields) {
                 String value = this.values[index];
-                result.put(field,value);
+                result.put(field, value);
                 index++;
             }
         }

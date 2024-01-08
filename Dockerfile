@@ -2,11 +2,13 @@ FROM alpine:3.16.2 AS builder
 
 WORKDIR /tmp
 
-ARG SPARK_VERSION=3.3.0
+ARG SPARK_VERSION=3.5.0
 ARG HADOOP_VERSION=3
 ARG DELTA_VERSION=2.1.0
 ARG ICEBERG_VERSION=0.14.1
 ARG ES_HADOOP_VERSION=8.2.2
+ARG CASSANDRA_VERSION=3.2.0
+ARG SPARK_SQL_KAFKA_VERSION=3.3.0
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
@@ -31,6 +33,8 @@ RUN mvn dependency:copy -Dartifact=io.delta:delta-core_2.12:${DELTA_VERSION} -Do
 RUN mvn dependency:copy -Dartifact=io.delta:delta-storage:${DELTA_VERSION} -DoutputDirectory=/spark_home/jars
 RUN mvn dependency:copy -Dartifact=org.elasticsearch:elasticsearch-hadoop:${ES_HADOOP_VERSION} -DoutputDirectory=/spark_home/jars
 RUN mvn dependency:copy -Dartifact=org.apache.iceberg:iceberg-core:${ICEBERG_VERSION} -DoutputDirectory=/spark_home/jars
+RUN mvn dependency:copy -Dartifact=com.datastax.spark:spark-cassandra-connector_2.12:${CASSANDRA_VERSION} -DoutputDirectory=/spark_home/jars
+RUN mvn dependency:copy -Dartifact=org.apache.spark:spark-sql-kafka-0-10_2.12:${SPARK_SQL_KAFKA_VERSION} -DoutputDirectory=/spark_home/jars
 RUN cd /spark_home/jars && wget https://artifacts.opensearch.org/opensearch-clients/jdbc/opensearch-sql-jdbc-1.1.0.1.jar
 
 FROM openjdk:8-jre-slim 
@@ -69,7 +73,7 @@ HEALTHCHECK --interval=5s --timeout=3s CMD if [ -f /src/public/index.html ] ; th
 RUN set -x && sed -i 's/http:/https:/g' /etc/apt/sources.list \
     && apt-get update -y && apt-get upgrade -y  \
     && ln -s /lib /lib64 \
-    && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y procps=2:3.3.17-5 bash=5.1-2+deb11u1 tini=0.19.0-1 libc6=2.31-13+deb11u4 libpam-modules=1.4.0-9+deb11u1 krb5-user=1.18.3-6+deb11u2 libnss3=2:3.61-1+deb11u2 \
+    && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y procps=2:3.3.17-5 bash=5.1-2+deb11u1 tini=0.19.0-1 libc6=2.31-13+deb11u7 libpam-modules=1.4.0-9+deb11u1 krb5-user=1.18.3-6+deb11u4 libnss3=2:3.61-1+deb11u3 \
     && rm /bin/sh \
     && ln -sv /bin/bash /bin/sh \
     && echo "auth required pam_wheel.so use_uid" >> /etc/pam.d/su \
