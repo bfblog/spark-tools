@@ -1,4 +1,6 @@
 # spark-tools
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/bfblog/spark-tools?quickstart=1)
  
 ## Regular Expression with named capturing groups
 
